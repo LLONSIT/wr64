@@ -51,7 +51,7 @@ SECTIONS
         build/asm/39F00.s.o(.text);
         build/asm/3A580.s.o(.text);
         build/asm/3AC00.s.o(.text);
-        build/asm/42670.s.o(.text);
+        build/src/game_42670.c.o(.text);
         build/asm/436A0.s.o(.text);
         build/asm/43DA0.s.o(.text);
         build/asm/4C750.s.o(.text);
@@ -109,8 +109,8 @@ SECTIONS
         build/asm/3A580.s.o(.data);
         _3AC00_s = .;
         build/asm/3AC00.s.o(.data);
-        _42670_s = .;
-        build/asm/42670.s.o(.data);
+        game_42670_c = .;
+        build/src/game_42670.c.o(.data);
         _436A0_s = .;
         build/asm/436A0.s.o(.data);
         _43DA0_s = .;
@@ -174,7 +174,7 @@ SECTIONS
         build/asm/39F00.s.o(.rodata);
         build/asm/3A580.s.o(.rodata);
         build/asm/3AC00.s.o(.rodata);
-        build/asm/42670.s.o(.rodata);
+        build/src/game_42670.c.o(.rodata);
         build/asm/436A0.s.o(.rodata);
         build/asm/43DA0.s.o(.rodata);
         build/asm/4C750.s.o(.rodata);
@@ -220,7 +220,7 @@ SECTIONS
         build/asm/39F00.s.o(.bss);
         build/asm/3A580.s.o(.bss);
         build/asm/3AC00.s.o(.bss);
-        build/asm/42670.s.o(.bss);
+        build/src/game_42670.c.o(.bss);
         build/asm/436A0.s.o(.bss);
         build/asm/43DA0.s.o(.bss);
         build/asm/4C750.s.o(.bss);

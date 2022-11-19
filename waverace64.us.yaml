@@ -14,8 +14,8 @@ options:
   # undefined_syms_auto_path: undefined_syms_auto.txt
   # symbol_addrs_path: symbol_addrs.txt
   # asm_path: asm
-  # src_path: src
-  # build_path: build
+  src_path: src
+  build_path: build
   # extensions_path: tools/splat_ext
   # mips_abi_float_regs: o32
   # section_order: [".text", ".data", ".rodata", ".bss"]
@@ -50,7 +50,7 @@ segments:
       - [0x39F00, asm]
       - [0x3A580, asm]
       - [0x3AC00, asm]
-      - [0x42670, asm]
+      - [0x42670, c, game_42670] #Testing
       - [0x436A0, asm]
       - [0x43DA0, asm]
       - [0x4C750, asm]
@@ -76,7 +76,7 @@ segments:
       - [0x805A0, asm]
       - [0x805F0, asm, visetmode]
   
-
+   #Compression?
   - type: bin
     start: 0x8CDB0
   - [0x800000]
