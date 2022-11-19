@@ -1,0 +1,3 @@
+
+osVirtualToPhysical = 0x800C5720; //defined:true 
+__osProbeTLB = 0x800CAA10; 
