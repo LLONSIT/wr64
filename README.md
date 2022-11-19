@@ -5,4 +5,4 @@ A early decompilation of Wave Race 64
 
 Put your Wave Race 64 US rom as `baserom.us.z64`
 
-run `make extract && make` 
+Run `make extract && make` 
