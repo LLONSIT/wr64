@@ -65,6 +65,8 @@ segments:
       - [0x74D80, asm]
       - [0x77080, asm]
       - [0x79B70, asm]
+      
+      #Libultra Starts!
       - [0x7FF20, c, os/osVirtualtoPhysical]
       - [0x7FFA0, c, os/osSendMesg]
       - [0x800F0, asm]
