@@ -13,7 +13,7 @@ glabel func_80088B84
 /* 433B0 80088BB0 4501000F */  bc1t       .L80088BF0
 /* 433B4 80088BB4 00000000 */   nop
 /* 433B8 80088BB8 AFA40018 */  sw         $a0, 0x18($sp)
-/* 433BC 80088BBC 0C031C04 */  jal        func_800C7010
+/* 433BC 80088BBC 0C031C04 */  jal        sqrtf
 /* 433C0 80088BC0 AFA5001C */   sw        $a1, 0x1C($sp)
 /* 433C4 80088BC4 3C013F80 */  lui        $at, (0x3F800000 >> 16)
 /* 433C8 80088BC8 44815000 */  mtc1       $at, $f10

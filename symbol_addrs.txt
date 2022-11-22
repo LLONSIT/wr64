@@ -1,3 +1,16 @@
 
-osVirtualToPhysical = 0x800C5720; //defined:true 
-__osProbeTLB = 0x800CAA10; 
+osVirtualToPhysical 	= 0x800C5720; //defined:true
+osSetTime       	= 0x800C5980; //defined:true
+osGetTime       	= 0x800C58F0; //defined:true
+osCreateMesgQueue 	= 0x800C6310; //defined:true
+osSetEventMesg  	= 0x800C6340; //defined:true
+osCreateThread  	= 0x800C6420; //defined:true
+sqrtf 			= 0x800C7010;
+__osCleanupThread 	= 0x800CB3B8; 
+osGetCount      	= 0x800CB3C0; //defined:true
+__osProbeTLB    	= 0x800CAA10; 
+__osDisableInt  	= 0x800CAAD0;
+__osRestoreInt  	= 0x800CAAF0;
+__osActiveQueue 	= 0x800E900C;  
+__osCurrentTime 	= 0x801D58A4; 
+__osBaseCounter 	= 0x801DAC58;

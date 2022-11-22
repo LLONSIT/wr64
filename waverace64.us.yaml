@@ -35,15 +35,15 @@ segments:
     vram: 0x80046800
     subsegments:
       - [0x1000, asm]
-      - [0x1C70, asm]
+      - [0x1C70, c, game_1C70] #Related with os funcs
       - [0x23E0, asm]
       - [0x5480, asm]
-      - [0x69D0, asm]
-      - [0xBD30, asm]
-      - [0xBF40, asm]
-      - [0xC6C0, asm]
-      - [0x24270, asm]
-      - [0x24B00, asm]
+      - [0x69D0, c, game_69D0]
+      - [0xBD30, c, game_BD30]
+      - [0xBF40, c, game_BF40]
+      - [0xC6C0, c, game_C6C0]
+      - [0x24270, c, game_24270]
+      - [0x24B00, c, game_24B00]
       - [0x2C670, asm]
       - [0x34D50, asm]
       - [0x355D0, asm]
@@ -58,7 +58,7 @@ segments:
       - [0x52990, asm]
       - [0x52CD0, asm]
       - [0x68A10, asm]
-      - [0x6EF50, asm]
+      - [0x6EF50, c, game_6EF50] #Display lists
       - [0x6F530, asm]
       - [0x6F5D0, asm]
       - [0x71AF0, asm]
@@ -69,14 +69,49 @@ segments:
       #Libultra Starts!
       - [0x7FF20, c, os/osVirtualtoPhysical]
       - [0x7FFA0, c, os/osSendMesg]
-      - [0x800F0, asm]
-      - [0x80180, asm]
+      - [0x800F0, c, os/osGetTime]
+      - [0x80180, c, os/osSetTime]
       - [0x801B0, asm]
       - [0x80460, asm]
       - [0x805A0, asm]
       - [0x805F0, asm, visetmode]
-  
-   #Compression?
+      - [0x80660, asm]
+      - [0x80820, asm]
+      - [0x80B00, asm]
+      - [0x80B10, asm]
+      - [0x80B40, c, os/osSetEventMesg]
+      - [0x80BB0, asm]
+      - [0x80C20, c, os/osCreateThread] #Important
+      - [0x80D70, asm]
+      - [0x80F70, asm]
+      - [0x812D0, asm, viblack]
+      - [0x81500, c, setthreadpri]
+      - [0x815E0, asm]
+      - [0x81810, hasm, sqrtf]
+      - [0x81820, c, game_81820] #Game segment
+      - [0x81B80, asm, guOrtho]
+      - [0x81D40, asm, guTranslate]
+      - [0x81DE0, asm]
+      - [0x822A0, asm]
+      - [0x82AD0, asm]
+      - [0x82C10, asm]
+      - [0x82D50, asm]
+      - [0x82DC0, asm]
+      - [0x830F0, asm]
+      - [0x83270, asm]
+      - [0x83410, asm]
+      - [0x835C0, asm]
+      - [0x840B0, asm]
+      - [0x84620, asm]
+      - [0x84630, asm]
+      - [0x84760, asm]
+      - [0x84A10, asm]
+      - [0x84AC0, asm]
+      - [0x84B70, asm]
+      - [0x84C80, asm]
+
+
+  #Compression?
   - type: bin
     start: 0x8CDB0
   - [0x800000]

@@ -1,5 +1,5 @@
 #include "common.h"
-
+#include "functions.h"
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_42670/func_80087E70.s")
 
