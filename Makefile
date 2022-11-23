@@ -30,7 +30,7 @@ ASM_DIRS  = asm asm/data asm/data/os asm/os
 BIN_DIRS  = assets
 SRC_DIR   = src
 
-SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/audio $(SRC_DIR)/os/gu $(SRC_DIR)/os/libc $(SRC_DIR)/audio
+SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/libc 
 
 TOOLS_DIR = tools
 
