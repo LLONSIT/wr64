@@ -6,6 +6,7 @@ typedef struct __OSEventState
     OSMesgQueue *messageQueue;
     OSMesg message;
 } __OSEventState;
+
 extern struct __osThreadTail
 {
     OSThread *next;

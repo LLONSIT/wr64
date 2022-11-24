@@ -6,9 +6,22 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_800984D0.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_800984F4.s")
+void func_800984F4(struct_8009852C* arg0, f32 arg1, f32 arg2, f32 arg3) {
+    arg0->unk0 = arg1;
+    arg0->unk4 = arg2;
+    arg0->unk8 = arg3;
+}
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_80098514.s")
+
+
+ /*   struct_8009852C  */
+
+void func_80098514(struct_8009852C* arg0) {
+    arg0->unk0 = 0.0f;
+    arg0->unk4 = 0.0f;
+    arg0->unk8 = 0.0f;
+}
+
 
 void func_8009852C(struct_8009852C *arg0, struct_8009852C *arg1) {
     arg0->unk0 =  arg1->unk0;
@@ -241,7 +254,22 @@ UNUSED func_8009C03C(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009C1C4.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009C240.s")
+
+void func_8009C240(struct_8009852C* arg0) {
+    f32 temp_f0;
+    f32 temp_f14;
+    f32 temp_f2;
+
+    if (D_801CE638 == 0x15) {
+        temp_f0 = D_800EB4F0 - arg0->unkC;
+        temp_f2 = 60.0f - arg0->unk10;
+        temp_f14 = 1000.0f - arg0->unk14;
+        D_800E5130 = sqrtf((temp_f0 * temp_f0) + (temp_f2 * temp_f2) + (temp_f14 * temp_f14));
+        return;
+    }
+    D_800E5130 = -1.0f;
+}
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009C2CC.s")
 

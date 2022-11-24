@@ -1,3 +1,9 @@
-#include "common.h"
+#include <os_internal.h>
+#include "viint.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/os/osViSwapBuffer/func_800C59B0.s")
+void osViSwapBuffer(void* frameBufPtr){
+    u32 saveMask = __osDisableInt();
+    __osViNext->framep = frameBufPtr;
+    __osViNext->state |= VI_STATE_10;
+    __osRestoreInt(saveMask);
+}
