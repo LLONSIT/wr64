@@ -11,5 +11,5 @@ Run `make extract && make`
 
 A small count of what the project has for now
 
-Functions : 742 (for now)
+Functions : 11/753 (for now)
 
