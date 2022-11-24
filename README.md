@@ -1,6 +1,11 @@
 # Wave Race 64
 A early decompilation of Wave Race 64
 
+
+# Dependencies 
+ For now you need the `mips64-elf-` toolchain and qemu-irix
+
+
 # Building!
 
 Put your Wave Race 64 US rom as `baserom.us.z64`
