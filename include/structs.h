@@ -2,6 +2,8 @@
 #define STRUCTS_H
 
 
+//TODO: Some lazy names here
+
 typedef struct  {
     f32 unk0;
     f32 unk4;
@@ -9,7 +11,7 @@ typedef struct  {
     f32 unkC;
     f32 unk10;
     f32 unk14;
-} struct_8009852C;
+} f_struct; //Float Struct
 
 typedef struct {
     s16 unk0;
@@ -26,8 +28,11 @@ typedef struct {
     s8 unk4;
     s8 unk5;
     s8 unk6;
-} struct_80047F48;
-
+    s8 pad1[0x1];
+    s8 unk8;
+    s8 unk9;
+    s8 unkA;
+} chr_struct; //char struct
 
 typedef struct {
 

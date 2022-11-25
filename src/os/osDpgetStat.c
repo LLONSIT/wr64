@@ -1,3 +1,3 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/os/osDpgetStat/func_800C5DA0.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/os/osDpgetStat/osDpGetStatus.s")

@@ -15,7 +15,18 @@ void func_80047E44(s32 arg0) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_23E0/func_80047EE0.s")
 
-void func_80047F48(struct_80047F48* arg0, s32 arg1, s32 arg2, s32 arg3) {
+void func_80047F48(chr_struct* arg0, s32 arg1, s32 arg2, s32 arg3) {
+    arg0->unk4 = arg1;
+    arg0->unk0 = arg1;
+    arg0->unk5 = arg2;
+    arg0->unk1 = arg2;
+    arg0->unk6 = arg3;
+    arg0->unk2 = arg3;
+}
+
+//Literally the same 
+
+void func_80047F64(chr_struct* arg0, s32 arg1, s32 arg2, s32 arg3) {
     arg0->unk4 = arg1;
     arg0->unk0 = arg1;
     arg0->unk5 = arg2;
@@ -25,9 +36,12 @@ void func_80047F48(struct_80047F48* arg0, s32 arg1, s32 arg2, s32 arg3) {
 }
 
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_23E0/func_80047F64.s")
+void func_80047F80(chr_struct* arg0, s32 arg1, s32 arg2, s32 arg3) {
+    arg0->unk8 = arg1;
+    arg0->unk9 = arg2;
+    arg0->unkA = arg3;
+}
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_23E0/func_80047F80.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_23E0/func_80047F90.s")
 

@@ -6,29 +6,27 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_800984D0.s")
 
-void func_800984F4(struct_8009852C* arg0, f32 arg1, f32 arg2, f32 arg3) {
+void func_800984F4(f_struct* arg0, f32 arg1, f32 arg2, f32 arg3) {
     arg0->unk0 = arg1;
     arg0->unk4 = arg2;
     arg0->unk8 = arg3;
 }
 
 
-
- /*   struct_8009852C  */
-
-void func_80098514(struct_8009852C* arg0) {
+void func_80098514(f_struct* arg0) {
     arg0->unk0 = 0.0f;
     arg0->unk4 = 0.0f;
     arg0->unk8 = 0.0f;
 }
 
 
-void func_8009852C(struct_8009852C *arg0, struct_8009852C *arg1) {
+void func_8009852C(f_struct *arg0, f_struct *arg1) {
     arg0->unk0 =  arg1->unk0;
     arg0->unk4 =  arg1->unk4;
     arg0->unk8 =  arg1->unk8;
 }
 
+//TODO: Maybe f_struct too?
 
 void func_80098548(struct_80098548 *arg0, struct_80098548 *arg1) {
     arg0->unk0 =  arg1->unk0;
@@ -169,7 +167,7 @@ void func_8009AD14(s32 arg0) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009B0C8.s")
 
-void func_8009B100(void) {
+UNUSED func_8009B100(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009B108.s")
@@ -255,7 +253,7 @@ UNUSED func_8009C03C(void) {
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009C1C4.s")
 
 
-void func_8009C240(struct_8009852C* arg0) {
+void func_8009C240(f_struct* arg0) {
     f32 temp_f0;
     f32 temp_f14;
     f32 temp_f2;

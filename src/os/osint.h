@@ -1,12 +1,11 @@
 #ifndef _OSINT_H
 #define _OSINT_H
-#include <PR/os_internal.h>
+#include <os_internal.h>
 typedef struct __OSEventState
 {
     OSMesgQueue *messageQueue;
     OSMesg message;
 } __OSEventState;
-
 extern struct __osThreadTail
 {
     OSThread *next;
