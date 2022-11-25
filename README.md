@@ -19,4 +19,4 @@ A small count of what the project has for now
 Functions : 11/753 (for now)
 
 # Some info
-Wave Race64 apparently use the MIO0 compression
+Wave Race 64 apparently use the MIO0 compression
