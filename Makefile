@@ -214,7 +214,7 @@ $(TARGET).bin: $(TARGET).elf
 	@printf "[$(CYAN) Objcopy $(NO_COL)]  $<\n"
 
 $(TARGET).z64: $(TARGET).bin
-	@cp $< $@
+	@tools/copymask $< $@ #Mask
 
 
 # fake targets for better error handling
