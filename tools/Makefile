@@ -9,5 +9,5 @@
 CC = gcc
 
 default:
-	gcc copymask.c -o copymask
+	gcc CopyRom.c -o CopyRom
 

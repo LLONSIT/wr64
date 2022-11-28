@@ -156,6 +156,10 @@ splat: $(SPLAT)
 extract: splat tools
 	$(PYTHON) $(SPLAT) $(BASENAME).$(VERSION).yaml
 
+dependencies: tools
+	@make -C tools
+	@$(PYTHON) -m pip install -r tools/splat/requirements.txt #Installing the splat dependencies
+
 
 clean:
 	rm -rf build
@@ -214,7 +218,7 @@ $(TARGET).bin: $(TARGET).elf
 	@printf "[$(CYAN) Objcopy $(NO_COL)]  $<\n"
 
 $(TARGET).z64: $(TARGET).bin
-	@tools/copymask $< $@ #Mask
+	@tools/CopyRom $< $@ #Mask
 
 
 # fake targets for better error handling
