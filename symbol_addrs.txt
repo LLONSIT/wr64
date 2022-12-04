@@ -1,3 +1,4 @@
+alSynFreeFX             = 0x800C00A4; //defined:true
 osViSwapBuffer          = 0x800C59B0; //defined:true
 osViSetSpecialFeatures  = 0x800C5E60; //defined:true
 osVirtualToPhysical 	= 0x800C5720; //defined:true

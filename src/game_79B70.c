@@ -42,7 +42,7 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_79B70/func_800C0044.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_79B70/func_800C00A4.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/game_79B70/alSynFreeFX.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_79B70/func_800C00B0.s")
 
