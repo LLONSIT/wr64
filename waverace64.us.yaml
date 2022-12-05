@@ -67,7 +67,7 @@ segments:
       - [0x74D80, c, game_74D80]
       - [0x77080, c, game_77080]
       - [0x79B70, c, game_79B70]
-      
+
       #Libultra Starts!
       - [0x7FF20, c, os/osVirtualtoPhysical]
       - [0x7FFA0, c, os/osSendMesg]
@@ -90,6 +90,8 @@ segments:
       - [0x80F40, hasm, libultra/writebackdcacheall]
       - [0x80F70, asm]
       - [0x812D0, c, os/osViBlack]
+      - [0x81340, c, os/osViGetCurrentFramebuffer]
+      - [0x81380, c, os/osCreatePiManager]
       - [0x81500, c, os/osSetThreadPri]
       - [0x815E0, asm]
       - [0x81810, hasm, libultra/sqrtf]
@@ -160,7 +162,8 @@ segments:
       - [0x8C920, c, os/libc/ldiv]
       - [0x8CAB0, hasm]
 
-  #Compression?
-  - type: bin
+  - name: Chunk1
+    type: bin
     start: 0x8CDB0
+  - [0x9787E, bin, n64_tex]
   - [0x800000]
