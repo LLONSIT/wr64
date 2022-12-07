@@ -9,6 +9,8 @@ A early decompilation of a game with many waves!
 
 * Obviously you need the original rom of the USA Version of Wave Race 64, I am not responsible for which methods you get it.
 
+* About regionalization, currently I am only decompiling the US version, for now I am not interested in the European or Japanese version, maybe I will do it later but for now it's not a priority
+
 ```
 
 ## Dependencies
