@@ -25,7 +25,7 @@ A early decompilation of a game with many waves!
 ```diff
 - WARNING -
 
-* If you cloned the repository without submodules do + make extract + and then make dependencies and + make extract + again
+* If you cloned the repository without submodules do make extract and then make dependencies and make extract again
 
 ```
 
