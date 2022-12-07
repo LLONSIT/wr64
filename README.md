@@ -39,6 +39,20 @@ Assuming that you cloned the repository with --recursive
 
 - Run ``make extract ; make``
 
+
+## Project Structure
+	
+	Wave Race 64
+	├── asm: Assembler files (TODO: Remaining segments to classify)
+	│   ├── libultra: Liubltra Hand written assembly files
+	│   └── asm_nonmatchings: Functions that have not yet been matched either from libultra or from the game
+	├── assets: Binary blobs from the game (very soon the textures will be)
+	├── build: output directory
+	├── include: header files, things like the structs or variables are here
+	├── src: C source code for game
+	│   └── os: Libultra files
+	└── tools: build tools
+
 # Progress
 
 A small count of what the project has for now
