@@ -21,8 +21,10 @@ void func_800468AC(void) {
 extern Gfx* D_80151944;
 
 void func_80046BF4(void) {
-gDPFullSync(D_80151944++);
-gSPEndDisplayList(D_80151944++);
+
+  gDPFullSync(D_80151944++);
+  gSPEndDisplayList(D_80151944++);
+
 }
 
 
@@ -30,7 +32,7 @@ gSPEndDisplayList(D_80151944++);
 
 void func_80046CF8(s32 arg0) {
     D_801542B4 = arg0;
-    func_800C57A0(&D_80154130, 0x15, 0);
+    osSendMesg(&D_80154130, 0x15, 0);
 }
 
 

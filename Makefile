@@ -30,7 +30,7 @@ ASM_DIRS  = asm asm/libultra #For libultra handwritten files
 BIN_DIRS  = assets
 SRC_DIR   = src
 
-SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/libc $(SRC_DIR)/os/audio
+SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/os $(SRC_DIR)/os/libc $(SRC_DIR)/os/audio $(SRC_DIR)/libultra_nm
 
 TOOLS_DIR = tools
 
@@ -72,7 +72,7 @@ LOOP_UNROLL    =
 
 MIPSISET       = -mips2 -32
 
-INCLUDE_CFLAGS = -I . -I include -I include/2.0I -I include/2.0I/PR -I include/libc -I assets
+INCLUDE_CFLAGS = -I . -I include -I include/ -I include/2.0I -I include/2.0I/PR -I assets
 
 ASFLAGS        = -EB -mtune=vr4300 -march=vr4300 -mabi=32 -I include
 OBJCOPYFLAGS   = -O binary
@@ -113,7 +113,7 @@ GCC_FLAGS += -Wall -Wextra -Wno-missing-braces
 TARGET     = $(BUILD_DIR)/$(BASENAME).$(VERSION)
 LD_SCRIPT  = $(BASENAME).ld
 
-LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt  -T undefined_syms_auto.txt
+LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt  -T undefined_syms_auto.txt -T libultra_undefined_syms.txt
 LD_FLAGS  += -Map $(TARGET).map --no-check-sections
 
 ifeq ($(VERSION),us)
@@ -219,7 +219,7 @@ $(TARGET).bin: $(TARGET).elf
 
 $(TARGET).z64: $(TARGET).bin
 	@tools/CopyRom $< $@ #Mask
-
+	@$(QEMU_IRIX) tools/nrdc -b -c $@
 
 # fake targets for better error handling
 $(SPLAT):

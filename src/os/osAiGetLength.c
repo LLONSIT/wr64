@@ -1,3 +1,6 @@
-#include "common.h"
+#include <rcp.h>
 
-#pragma GLOBAL_ASM("asm/nonmatchings/os/osAiGetLength/func_800CA950.s")
+u32 osAiGetLength(void)
+{
+    return IO_READ(AI_LEN_REG);
+}

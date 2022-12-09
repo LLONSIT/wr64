@@ -1,0 +1,3 @@
+__osContPifRam =  0x801D56FC;
+__osCurrentTime                = 0x801D58A4;
+__osContPifRam = 0x801DAB60;
