@@ -1,6 +1,16 @@
-#include "common.h"
+#include <ultra64.h>
+#include "variables.h"
+#include "structs.h"
+#include "functions.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_23E0/func_80047BE0.s")
+
+s32 func_80047BE0(f32 arg0) {
+    if (arg0 < 0.0f) {
+        return arg0 - 0.5f;
+    }
+    return arg0 + 0.5f;
+}
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_23E0/func_80047C38.s")
 
