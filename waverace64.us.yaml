@@ -48,7 +48,7 @@ segments:
       - [0x24B00, c, game_24B00]
       - [0x2C670, c, game_2C670]
       - [0x34D50, c, game_34D50]
-      - [0x355D0, c, game_355D0]
+      - [0x355D0, c, core/game_355D0]
       - [0x39F00, c, game_39F00]
       - [0x3A580, c, game_3A580]
       - [0x3AC00, c, game_3AC00]
@@ -165,5 +165,5 @@ segments:
   - name: Chunk1
     type: bin
     start: 0x8CDB0
-  - [0x9787E, bin, n64_tex]
+  - [0x9787E, bin, n64_tex] #Testing with nintendo 64 logo texture
   - [0x800000]
