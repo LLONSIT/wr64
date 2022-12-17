@@ -50,7 +50,8 @@ Assuming that you cloned the repository with --recursive
 	├── build: output directory
 	├── include: header files, things like the structs or variables are here
 	├── src: C source code for game
-	│   └── os: Libultra files
+	│   ├── os: Libultra files
+	│   └── core: DMA code
 	└── tools: build tools
 
 # Progress
