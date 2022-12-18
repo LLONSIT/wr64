@@ -1,3 +1,6 @@
+
+
+//Libultra Symbols
 alSynFreeFX             = 0x800C00A4; //defined:true
 osViSwapBuffer          = 0x800C59B0; //defined:true
 osViSetSpecialFeatures  = 0x800C5E60; //defined:true
@@ -12,11 +15,13 @@ osRecvMesg              = 0x800C5C60; //defined:true
 osDpGetStatus		= 0x800C5DA0; //defined:true
 osViSetMode		= 0x800C5DF0; //defined:true
 osSpTaskYield           = 0x800C6020; //defined:true
+osSpTaskStartGo         = 0x800C62BC; //?
 osDpSetStatus		= 0x800C6300; //defined:true
 osCreateMesgQueue	= 0x800C6310; //defined:true
 osSetEventMesg	        = 0x800C6340; //defined:true
 osCreateThread	        = 0x800C6420; //defined:true
 osStartThread           = 0x800C6570; //defined:true
+osSpTaskLoad            = 0x800C615C; //?
 osViBlack               = 0x800C6AD0; //defined:true
 osViGetCurrentFramebuffer = 0x800C6B40; //defined:true
 osCreatePiManager       = 0x800C6B80; //defined:true
@@ -74,3 +79,5 @@ __osEepromTimer         = 0x801DABA8;
 __osEepromTimerQ        = 0x801DABC8;
 __osEepromTimerMsg      = 0x801DABE0;
 
+//Game Symbols
+task = 0x801542B8;

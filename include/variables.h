@@ -31,3 +31,9 @@ extern s32 D_801CE644;
 
 
 
+//Main
+extern OSTask *task;
+extern s32 D_800D4600;
+extern s32 D_800D4604;
+extern OSThread *D_801539E0;
+extern void* D_80151DE0;
