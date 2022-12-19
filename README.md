@@ -1,3 +1,11 @@
+</p>
+<p align="left">
+    <a href="https://img.shields.io/badge/Remaining%20functions-32%2F36-green" alt="Contributors">
+        <img src="https://img.shields.io/badge/Libultra-7.7%25-green" /></a>
+  
+</p>
+
+
 # Wave Race 64
 A early decompilation of a game with many waves!
 
@@ -54,8 +62,4 @@ Assuming that you cloned the repository with --recursive
 	│   └── core: DMA code
 	└── tools: build tools
 
-# Progress
 
-A small count of what the project has for now
-
-Libultra: 7.7% (the badges will come very soon)
