@@ -165,5 +165,4 @@ segments:
   - name: Chunk1
     type: bin
     start: 0x8CDB0
-  - [0x9787E, bin, n64_tex] #Testing with nintendo 64 logo texture
   - [0x800000]

@@ -4,6 +4,11 @@
 #include "functions.h"
 #include "macros.h"
 
+//vars
+
+extern void *func_8009AE6C;
+
+
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_800984D0.s")
 
 void func_800984F4(f_struct* arg0, f32 arg1, f32 arg2, f32 arg3) {
@@ -165,7 +170,11 @@ void func_8009AD14(s32 arg0) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009B030.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009B0C8.s")
+void func_8009B0C8(s32 arg0) {
+    func_8009ADA8();
+    func_8009A460(&func_8009AE6C, arg0, 0x3C, 0x3C);
+}
+
 
 UNUSED func_8009B100(void) {
 }
