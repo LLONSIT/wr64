@@ -48,6 +48,8 @@ O_FILES := $(foreach file,$(S_FILES),$(BUILD_DIR)/$(file).o) \
            $(foreach file,$(BIN_FILES),$(BUILD_DIR)/$(file).o)
 
 
+find-command = $(shell which $(1) 2>/dev/null)
+
 # Tools
 
 CROSS    = mips64-elf-
@@ -64,8 +66,25 @@ XGCC     = mips64-elf-gcc
 GREP     = grep -rl
 
 #For segments without GLOBAL_ASM
-QEMU_IRIX = /usr/bin/qemu-irix
-CC       = $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc
+
+USE_QEMU_IRIX ?= 0
+$(eval $(call validate-option,USE_QEMU_IRIX,0 1))
+
+
+ifeq ($(USE_QEMU_IRIX),1)
+  # Verify that qemu-irix exists
+  QEMU_IRIX := $(call find-command,qemu-irix)
+  ifeq (,$(QEMU_IRIX))
+    $(error Using the IDO compiler requires qemu-irix. Please install qemu-irix>
+  endif
+endif
+
+ifeq ($(USE_QEMU_IRIX),1)
+        CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOL>
+        else
+        CC       := $(TOOLS_DIR)/ido5.3_recomp/cc
+        endif
+
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
 
@@ -116,7 +135,7 @@ GCC_FLAGS += -Wall -Wextra -Wno-missing-braces
 TARGET     = $(BUILD_DIR)/$(BASENAME).$(VERSION)
 LD_SCRIPT  = $(BASENAME).ld
 
-LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt  -T undefined_syms_auto.txt -T libultra_undefined_syms.txt
+LD_FLAGS   = -T $(LD_SCRIPT) -T undefined_funcs_auto.txt  -T undefined_syms_auto.txt -T libultra_undefined_syms.txt -T resolve.txt
 LD_FLAGS  += -Map $(TARGET).map --no-check-sections
 
 ifeq ($(VERSION),us)
@@ -222,7 +241,7 @@ $(TARGET).bin: $(TARGET).elf
 
 $(TARGET).z64: $(TARGET).bin
 	@tools/CopyRom $< $@ #Mask
-	@$(QEMU_IRIX) tools/nrdc -b -c $@
+	@qemu-irix -L tools/ido5.3_compiler/ tools/nrdc -b -c $@ #TODO: clarify this
 
 # fake targets for better error handling
 $(SPLAT):
@@ -232,7 +251,7 @@ $(SPLAT):
 	git submodule update --init --recursive
 
 baserom.$(VERSION).z64:
-	$(error Place the AeroGauge ROM, named '$@', in the root of this repo and try again.)
+	$(error Place the Wave Race 64 ROM, named '$@', in the root of this repo and try again.)
 
 ### Settings
 .SECONDARY:

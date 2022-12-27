@@ -1,13 +1,18 @@
-#***********************************************************
+#*************************************************************
 #
-#	Simple Makefile for Copymask and other tools
+#	A very simple Makefile for Copymask and other tools
 #
+#	TODO
 #
-#
-#***********************************************************
+#*************************************************************
 
-CC = gcc
+
+
 
 default:
-	gcc CopyRom.c -o CopyRom
+	@$(CC) CopyRom.c -o CopyRom
+	@make  -C  ido5.3_recomp
+	@printf "done\n"
 
+clean:
+	rm CopyRom
