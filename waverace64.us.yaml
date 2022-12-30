@@ -129,7 +129,7 @@ segments:
       - [0x85160, c, os/osAiSetNextBuffer]
       - [0x85210, hasm, libultra/probetlb]
       - [0x852D0, hasm, libultra/interrupt]
-      - [0x85310, c, libultra_nmm/UnkLibultraSeg_85310]
+      - [0x85310, asm] #TODO
       - [0x85BD0, c, libultra_nm/unkLibultraSeg_85BD0]
       - [0x86100, c, libultra_nm/unkLibultraSeg_86100]
       - [0x86270, asm]

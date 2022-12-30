@@ -31,7 +31,6 @@ guFrustum               = 0x800C74D4; //defined:true
 osEepromLongWrite       = 0x800C82D0; //defined:true
 osEepromProbe           = 0x800C8550; //defined:true
 osPhysicalToVirtual     = 0x800C9E20; //defined:true
-osInvalDCache           = 0x800CA2C0; //defined:true
 bzero                   = 0x800CA500; //defined:true
 osAiSetFrequency        = 0x800CA5A0; //defined:true
 osAiSetNextBuffer       = 0x800CA960; //defined:true
@@ -72,6 +71,7 @@ osRomType		= 0x800E90B0;
 __osViNext              = 0x800E90B4;
 __osCurrentTime		= 0x801D58A4;
 __osEventStateTab       = 0x801D86F0;
+
 __osContLastCmd         = 0x801DABA0; 
 _osContCmdBuf           = 0x801DAB60; 
 _osContPifCtrl          = 0x801DAB9C;
@@ -79,6 +79,16 @@ __osBaseCounter		= 0x801DAC58;
 __osEepromTimer         = 0x801DABA8;
 __osEepromTimerQ        = 0x801DABC8;
 __osEepromTimerMsg      = 0x801DABE0;
+__osTimerCounter	=    0x801DAC60;
+siacs_bss_0000		=    0x801DAC70;
+__osSiAccessQueue	=    0x801DAC78;
+__osPiAccessQueue	=    0x801DAC98;
+__osEepPifRam		=    0x801DACB0;
+kdebugserver_bss_0000	=    0x801DACF0;
+guMtxF2L		=    0x801EDD90;
+guRotateRPYF		=    0x801EDF9C;
+guAlignF		=    0x801EE040;
 
 //Game Symbols
-task = 0x801542B8;
+first_task  = 0x801542B4;
+second_task = 0x801542B8;

@@ -2,7 +2,7 @@
 #
 #	A very simple Makefile for Copymask and other tools
 #
-#	TODO
+#	TODO: nrdc recompilation soon!
 #
 #*************************************************************
 
@@ -16,4 +16,4 @@ default:
 	@printf "done\n"
 
 clean:
-	rm CopyRom
+	rm CopyRom n64crc

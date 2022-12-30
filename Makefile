@@ -75,17 +75,17 @@ ifeq ($(USE_QEMU_IRIX),1)
   # Verify that qemu-irix exists
   QEMU_IRIX := $(call find-command,qemu-irix)
   ifeq (,$(QEMU_IRIX))
-    $(error Using the IDO compiler requires qemu-irix. Please install qemu-irix>
+    $(error Using the IDO compiler requires qemu-irix. Please install qemu-irix)
   endif
 endif
 
 #Options
 
 ifeq ($(USE_QEMU_IRIX),1)
-        CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOL>
-        else
+        CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc
+else
         CC       := $(TOOLS_DIR)/ido5.3_recomp/cc
-        endif
+endif
 
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 

@@ -30,8 +30,9 @@ void func_80046BF4(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1050/func_80046C30.s")
 
+//interesting...
 void func_80046CF8(s32 arg0) {
-    D_801542B4 = arg0;
+    first_task = arg0;
     osSendMesg(&D_80154130, 0x15, 0);
 }
 
