@@ -1,3 +1,4 @@
+
 name: Wave Race 64 (North America)
 sha1: 508dfc2d4caa42b6f6de5263d0aed5e44ac7966a
 options:
@@ -34,7 +35,12 @@ segments:
     start: 0x1000
     vram: 0x80046800
     subsegments:
-      #Main Game segment
+
+
+      #Game layout
+
+      #First_Segment (texture mio0 compressed segment?) -> Game code -> libultra_Segment
+
       - [0x1000, hasm, entrypoint]
       - [0x1050, c, game_1050] #Some GFX macros
       - [0x1C70, c, main]
@@ -123,7 +129,7 @@ segments:
       - [0x85160, c, os/osAiSetNextBuffer]
       - [0x85210, hasm, libultra/probetlb]
       - [0x852D0, hasm, libultra/interrupt]
-      - [0x85310, asm]
+      - [0x85310, c, libultra_nmm/UnkLibultraSeg_85310]
       - [0x85BD0, c, libultra_nm/unkLibultraSeg_85BD0]
       - [0x86100, c, libultra_nm/unkLibultraSeg_86100]
       - [0x86270, asm]
@@ -162,7 +168,14 @@ segments:
       - [0x8C920, c, os/libc/ldiv]
       - [0x8CAB0, asm]
 
-  - name: Chunk1
+  - name: Chunk1 #First Seg
     type: bin
     start: 0x8CDB0
+    #vram: 0x80046800
+    #subsegments:
+      #- [	]
+
+
+
+
   - [0x800000]

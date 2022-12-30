@@ -31,6 +31,7 @@ guFrustum               = 0x800C74D4; //defined:true
 osEepromLongWrite       = 0x800C82D0; //defined:true
 osEepromProbe           = 0x800C8550; //defined:true
 osPhysicalToVirtual     = 0x800C9E20; //defined:true
+osInvalDCache           = 0x800CA2C0; //defined:true
 bzero                   = 0x800CA500; //defined:true
 osAiSetFrequency        = 0x800CA5A0; //defined:true
 osAiSetNextBuffer       = 0x800CA960; //defined:true
