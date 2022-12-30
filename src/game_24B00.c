@@ -34,5 +34,4 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_24B00/func_8006E3A8.s")
 
-//Never touch this function, 200kb
 #pragma GLOBAL_ASM("asm/nonmatchings/game_24B00/func_8006E674.s")

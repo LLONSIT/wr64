@@ -15,7 +15,7 @@ s32 func_80047BE0(f32 arg0) {
 #pragma GLOBAL_ASM("asm/nonmatchings/game_23E0/func_80047C38.s")
 
 void func_80047E44(s32 arg0) {
-    D_800D4640 = arg0;
+    __additional_scanline = arg0; //libultra?
 }
 
 

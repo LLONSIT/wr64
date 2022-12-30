@@ -8,7 +8,7 @@ extern OSMesgQueue *D_80154130;
 extern s32 D_801542B4;
 
 //0x800D
-extern s32 D_800D4640;
+extern s32 __additional_scanline;
 extern s32 D_800D461C;
 extern s32 D_800DAB1C;
 extern s32 D_800DAB24;

@@ -96,7 +96,7 @@ segments:
       - [0x815E0, c, libultra_nm/UnkLibultraSeg_815E0]
       - [0x81810, hasm, libultra/sqrtf]
       - [0x81820, c, game_81820] #Game segment
-      - [0x81B80, c, os/guOrtho] #TODO
+      - [0x81B80, asm, guOrtho] #sucks
       - [0x81D40, c, os/guTranslate] #TODO
       - [0x81DE0, c, libultra_nm/UnkLibultraSeg_81DE0] #gu funcs
       - [0x822A0, c, libultra_nm/UnkLibultraSeg_822A0]

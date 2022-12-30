@@ -1,9 +1,3 @@
-#include <os_internal.h>
-#include "piint.h"
+#include "common.h"
 
-OSMesgQueue *osPiGetCmdQueue(void)
-{
-    if (!__osPiDevMgr.active)
-        return NULL;
-    return __osPiDevMgr.cmdQueue;
-}
+#pragma GLOBAL_ASM("asm/nonmatchings/os/osPiGetCmdQueue/osPiGetCmdQueue.s")

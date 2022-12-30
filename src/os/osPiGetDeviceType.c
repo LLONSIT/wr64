@@ -1,6 +1,3 @@
-#include <os_internal.h>
+#include "common.h"
 
-s32 osPiGetDeviceType()
-{
-    return osRomType;
-}
+#pragma GLOBAL_ASM("asm/nonmatchings/os/osPiGetDeviceType/osPiGetDeviceType.s")

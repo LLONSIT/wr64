@@ -79,6 +79,8 @@ ifeq ($(USE_QEMU_IRIX),1)
   endif
 endif
 
+#Options
+
 ifeq ($(USE_QEMU_IRIX),1)
         CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOL>
         else
@@ -87,7 +89,23 @@ ifeq ($(USE_QEMU_IRIX),1)
 
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
+NRDC ?= 0
+$(eval $(call validate-option,NRDC,0 1))
 
+
+ifeq ($(NRDC),1)
+  # Verify that qemu-irix exists
+  QEMU_IRIX := $(call find-command,qemu-irix)
+  ifeq (,$(QEMU_IRIX))
+    $(error Using the Nintendo Master Data Utility requires qemu-irix. Please install qemu-irix package or set the QEMU_IRIX environment variable to the full qemu-irix binary path)
+  endif
+endif
+
+ifeq ($(NRDC),1)
+	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
+	else
+	CRC := @tools/n64crc build/$(BASENAME).us.z64
+	endif
 
 OPT_FLAGS      = -O2
 LOOP_UNROLL    =
@@ -240,8 +258,10 @@ $(TARGET).bin: $(TARGET).elf
 	@printf "[$(CYAN) Objcopy $(NO_COL)]  $<\n"
 
 $(TARGET).z64: $(TARGET).bin
+	@printf "[$(BLUE) CopyRom $(NO_COL)]  $<\n"
 	@tools/CopyRom $< $@ #Mask
-	@qemu-irix -L tools/ido5.3_compiler/ tools/nrdc -b -c $@ #TODO: clarify this
+	@printf "[$(GREEN) CRC $(NO_COL)]  $<\n"
+	@$(CRC)
 
 # fake targets for better error handling
 $(SPLAT):

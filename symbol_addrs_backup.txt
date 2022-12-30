@@ -1,4 +1,5 @@
 
+
 //Libultra Symbols
 alSynFreeFX             = 0x800C00A4; //defined:true
 osViSwapBuffer          = 0x800C59B0; //defined:true
@@ -61,7 +62,6 @@ _Ldtob                  = 0x800D12E0; //defined:true
 __osAtomicDec           = 0x800D20C0; //defined:true
 lldiv                   = 0x800D2120; //defined:true
 ldiv                    = 0x800D2220; //defined:true
-__additional_scanline   = 0x800D4640;
 __osPiDevMgr		= 0x800E8FB0; 
 __osThreadTail          = 0x800E9000; 
 __osRunQueue            = 0x800E9008; 
@@ -71,6 +71,7 @@ osRomType		= 0x800E90B0;
 __osViNext              = 0x800E90B4;
 __osCurrentTime		= 0x801D58A4;
 __osEventStateTab       = 0x801D86F0;
+
 __osContLastCmd         = 0x801DABA0; 
 _osContCmdBuf           = 0x801DAB60; 
 _osContPifCtrl          = 0x801DAB9C;
@@ -78,6 +79,14 @@ __osBaseCounter		= 0x801DAC58;
 __osEepromTimer         = 0x801DABA8;
 __osEepromTimerQ        = 0x801DABC8;
 __osEepromTimerMsg      = 0x801DABE0;
-
+__osTimerCounter	=    0x801DAC60;
+siacs_bss_0000		=    0x801DAC70;
+__osSiAccessQueue	=    0x801DAC78;
+__osPiAccessQueue	=    0x801DAC98;
+__osEepPifRam		=    0x801DACB0;
+kdebugserver_bss_0000	=    0x801DACF0;
+guMtxF2L		=    0x801EDD90;
+guRotateRPYF		=    0x801EDF9C;
+guAlignF		=    0x801EE040;
 //Game Symbols
 task = 0x801542B8;

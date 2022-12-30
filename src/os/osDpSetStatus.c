@@ -1,7 +1,3 @@
-#include <os_internal.h>
-#include <rcp.h>
+#include "common.h"
 
-void osDpSetStatus(u32 data)
-{
-    IO_WRITE(DPC_STATUS_REG, data);
-}
+#pragma GLOBAL_ASM("asm/nonmatchings/os/osDpSetStatus/osDpSetStatus.s")
