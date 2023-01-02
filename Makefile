@@ -259,7 +259,7 @@ $(TARGET).bin: $(TARGET).elf
 
 $(TARGET).z64: $(TARGET).bin
 	@printf "[$(BLUE) CopyRom $(NO_COL)]  $<\n"
-	@tools/CopyRom $< $@ #Mask
+	@tools/CopyRom.py $< $@ #Mask
 	@printf "[$(GREEN) CRC $(NO_COL)]  $<\n"
 	@$(CRC)
 
