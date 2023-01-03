@@ -8,16 +8,22 @@ def get_files(rom_file, mask_file):
     total = 0
     value = 0
     while True:
-        total = rom_file.read(1)
+        # Read a block of bytes instead of a single byte
+        total = rom_file.read(4096)
         if not total:
             break
-        value += 1
+        value += len(total)
         mask_file.write(total)
     return value
 
 def write_dummy(out_file, n):
-    for _ in range(n):
-        out_file.write(b'\xff')
+
+    # Write in blocks of 4096 bytes instead of 1 byte
+    for _ in range(n//4096):
+        out_file.write(b'\xff' * 4096)
+
+    # write remaining bytes
+    out_file.write(b'\xff' * (n % 4096))
 
 def main():
     if len(sys.argv) != 3:
@@ -35,3 +41,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
