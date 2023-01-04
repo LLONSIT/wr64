@@ -89,7 +89,7 @@ endif
 
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
-NRDC ?= 0
+NRDC ?= 1
 $(eval $(call validate-option,NRDC,0 1))
 
 
@@ -101,8 +101,12 @@ ifeq ($(NRDC),1)
   endif
 endif
 
+#
+# -i initial code
+# -t title patch
+#
 ifeq ($(NRDC),1)
-	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
+	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c -iNWRE -t"WAVE RACE 64" build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
 	else
 	CRC := @tools/n64crc build/$(BASENAME).us.z64
 	endif
