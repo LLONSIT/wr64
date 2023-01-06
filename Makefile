@@ -89,7 +89,7 @@ endif
 
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
-NRDC ?= 1
+NRDC ?= 0
 $(eval $(call validate-option,NRDC,0 1))
 
 
@@ -116,7 +116,7 @@ LOOP_UNROLL    =
 
 MIPSISET       = -mips2 -32
 
-INCLUDE_CFLAGS = -I . -I include -I include/ -I include/2.0I -I include/2.0I/PR -I assets
+INCLUDE_CFLAGS = -I . -I include/libc  -I include/PR -I include -I assets
 
 ASFLAGS        = -EB -mtune=vr4300 -march=vr4300 -mabi=32 -I include
 OBJCOPYFLAGS   = -O binary
@@ -126,7 +126,7 @@ GLOBAL_ASM_C_FILES := $(shell $(GREP) GLOBAL_ASM $(SRC_DIR) </dev/null 2>/dev/nu
 GLOBAL_ASM_O_FILES := $(foreach file,$(GLOBAL_ASM_C_FILES),$(BUILD_DIR)/$(file).o)
 
 
-DEFINES := -D_LANGUAGE_C -D_FINALROM -DF3DEX_GBI -DWIN32 -DSSSV -DNDEBUG
+DEFINES := -D_LANGUAGE_C -D_FINALROM -DF3DEX_GBI -DWIN32 -DSSSV -DNDEBUG -DTARGET_N64
 
 
 DEFINES += -DVERSION_US

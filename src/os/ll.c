@@ -20,4 +20,4 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/os/ll/func_800CC9F4.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/os/ll/func_800CCA20.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/os/ll/osSetTimer.s")
