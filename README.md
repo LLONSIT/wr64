@@ -95,6 +95,11 @@ Assuming that you cloned the repository with --recursive
 
 
 - If you want to use the nrdc to recalculate the CRC, and make a title patch, and the initial code that for wr64 would be NWRE (requires qemu-irix)
+
+
+
+
+
 `make NRDC=1`
 
 
