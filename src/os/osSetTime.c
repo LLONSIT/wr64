@@ -1,3 +1,9 @@
-#include "common.h"
+#include "libultra_internal.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/os/osSetTime/osSetTime.s")
+extern OSTime D_801DAC50;
+
+void osSetTime(OSTime time) {
+    D_801DAC50 = time;
+}
+
+//#pragma GLOBAL_ASM("asm/nonmatchings/os/osSetTime/osSetTime.s")

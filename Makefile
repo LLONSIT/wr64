@@ -116,7 +116,7 @@ LOOP_UNROLL    =
 
 MIPSISET       = -mips2 -32
 
-INCLUDE_CFLAGS = -I . -I include/libc  -I include/PR -I include -I assets
+INCLUDE_CFLAGS = -I . -I include/libc  -I include/PR -I include -I assets -I src/os 
 
 ASFLAGS        = -EB -mtune=vr4300 -march=vr4300 -mabi=32 -I include
 OBJCOPYFLAGS   = -O binary

@@ -1,7 +1,7 @@
 #ifndef _ULTRA64_CONTROLLER_INTERNAL_H_
 #define _ULTRA64_CONTROLLER_INTERNAL_H_
 
-#include <types.h>
+#include <ultra64.h>
 
 typedef struct
 {
