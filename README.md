@@ -48,8 +48,6 @@ A early decompilation of a game with many waves!
 - Warning -
 
 * This point can become something complicated for certain users, so it is recommended to follow the instructions well
-
-
 ```
 
 - First clone the binutils repo
