@@ -51,6 +51,8 @@ A early decompilation of a game with many waves!
 ```
 
 * First clone the binutils repo
+
+
 `git clone https://github.com/tj90241/n64chain`
 
 * After cloning the repository and assuming that you're not in the n64chain directory, would be the following
@@ -91,12 +93,13 @@ Assuming that you cloned the repository with --recursive
 ### Some opts
 
 - If you want to build the repo without ido5.3_recomp, only with qemu_irix
+
+
+
 `make USE_QEMU_IRIX=1`
 
 
 - If you want to use the nrdc to recalculate the CRC, and make a title patch, and the initial code that for wr64 would be NWRE (requires qemu-irix)
-
-
 
 
 
