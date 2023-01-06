@@ -1,4 +1,4 @@
-IRIX_ROOT := ../ido5.3_compiler
+IRIX_ROOT := ../ido5.3_cc
 
 cc: OPT_CFLAGS := -O2
 cfe: OPT_CFLAGS := -O2

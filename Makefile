@@ -82,7 +82,7 @@ endif
 #Options
 
 ifeq ($(USE_QEMU_IRIX),1)
-        CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc
+        CC       := $(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_cc $(TOOLS_DIR)/ido5.3_compiler/usr/bin/cc
 else
         CC       := $(TOOLS_DIR)/ido5.3_recomp/cc
 endif
