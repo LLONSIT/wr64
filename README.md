@@ -50,14 +50,14 @@ A early decompilation of a game with many waves!
 * This point can become something complicated for certain users, so it is recommended to follow the instructions well
 ```
 
-- First clone the binutils repo
+* First clone the binutils repo
 `git clone https://github.com/tj90241/n64chain`
 
-- After cloning the repository and assuming that you're not in the n64chain directory, would be the following
+* After cloning the repository and assuming that you're not in the n64chain directory, would be the following
 
 `cd n64chain/tools && bash build-posix64-toolchain.sh binutils`
 
-- Then you need the binutils in your `$PATH`
+* Then you need the binutils in your `$PATH`
 
 `echo 'PATH=$PATH:/path/to/n64chain/tools/bin; export PATH' >> ~/.bashrc ; source ~/.bashrc`
 
