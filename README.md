@@ -42,7 +42,7 @@ A early decompilation of a game with many waves!
 `wget https://github.com/n64decomp/qemu-irix/releases/download/v2.11-deb/qemu-irix-2.11.0-2169-g32ab296eef_amd64.deb && sudo dpkg -i qemu-irix-*.deb`
 
 
-- installing the binutils 
+- Installing the binutils 
 
 ```diff
 - Warning -
