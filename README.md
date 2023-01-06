@@ -17,8 +17,6 @@ A early decompilation of a game with many waves!
 
 # Dependencies
 
-- With a little patience I think you can get this to work on Msys2 to ;) (Although it can be a "little" stressful)
-
 - Installing the required dependencies
 
 ### Dependencies List
