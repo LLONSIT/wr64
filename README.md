@@ -15,31 +15,91 @@ A early decompilation of a game with many waves!
 
 ```
 
-## Dependencies
+# Dependencies
 
 - With a little patience I think you can get this to work on Msys2 to ;) (Although it can be a "little" stressful)
 
-- Install ``mips64-elf-binutils`` and ``Qemu Irix`` (for now) 
+- Installing the required dependencies
 
-- Do `make dependencies`
+### Dependencies List
 
-- Run ``git clone --recursive https://github.com/LLONSIT/wr64.git``
+* Capstone
+* pip3
+* Python
+* mips-binutils
+* Qemu Irix (Optional)
+
+## Linux
+
+#### Debian/Ubuntu or Wsl Ubuntu
+
+- To install the first 3 dependencies would be:
+
+ `apt-get update ; apt-get install libcapstone-dev python3-pip build-essential`
+
+* Installing Qemu Irix (optional)
+
+
+
+`wget https://github.com/n64decomp/qemu-irix/releases/download/v2.11-deb/qemu-irix-2.11.0-2169-g32ab296eef_amd64.deb && sudo dpkg -i qemu-irix-*.deb`
+
+
+- installing the binutils 
+
+```diff
+- Warning -
+
+* This point can become something complicated for certain users, so it is recommended to follow the instructions well
+
+
+```
+
+- First clone the binutils repo
+`git clone https://github.com/tj90241/n64chain`
+
+- After cloning the repository and assuming that you're not in the n64chain directory, would be the following
+
+`cd n64chain/tools && bash build-posix64-toolchain.sh binutils`
+
+- Then you need the binutils in your `$PATH`
+
+`echo 'PATH=$PATH:/path/to/n64chain/tools/bin; export PATH' >> ~/.bashrc ; source ~/.bashrc`
+
+
+# Building
+
+
+- Cloning the repo
+
+``git clone https://github.com/LLONSIT/wr64.git --recursive``
+
+- installing the splat dependencies and building some tools
+ 
+ `make dependencies`
 
 
 ```diff
-- WARNING -
+- Warning -
 
 * If you cloned the repository without submodules do make extract and then make dependencies and make extract again
 
 ```
-
-## Building the rom!
 
 - Copy the Wave Race 64 USA Rom to ``baserom.z64``
 
 Assuming that you cloned the repository with --recursive
 
 - Run ``make extract ; make``
+
+
+### Some opts
+
+- If you want to build the repo without ido5.3_recomp, only with qemu_irix
+`make USE_QEMU_IRIX=1`
+
+
+- If you want to use the nrdc to recalculate the CRC, and make a title patch, and the initial code that for wr64 would be NWRE (requires qemu-irix)
+`make NRDC=1`
 
 
 ## Project Structure
