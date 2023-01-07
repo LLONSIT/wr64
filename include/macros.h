@@ -21,7 +21,7 @@
 #ifdef __GNUC__
 #define UNUSED __attribute__((unused))
 #else
-#define UNUSED
+#define UNUSED u32 //default type
 #endif
 
 // Avoid undefined behaviour for non-returning functions

@@ -106,7 +106,7 @@ endif
 # -t title patch
 #
 ifeq ($(NRDC),1)
-	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_compiler $(TOOLS_DIR)/nrdc -b -c -iNWRE -t"WAVE RACE 64" build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
+	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_cc $(TOOLS_DIR)/nrdc -b -c -iNWRE -t"WAVE RACE 64" build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
 	else
 	CRC := @tools/n64crc build/$(BASENAME).us.z64
 	endif
@@ -237,6 +237,7 @@ endif
 
 # non asm-processor recipe
 $(BUILD_DIR)/%.c.o: %.c
+#	@$(CC_CHECK) $<
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $<
 	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
 
