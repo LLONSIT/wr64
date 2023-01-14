@@ -40,7 +40,58 @@ void func_8007BBF0(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/core/game_355D0/func_8007BBF8.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/core/game_355D0/func_8007BC44.s")
+extern u8 D_800D8268;
+extern s32 *D_800D826A;
+
+extern u8 D_801AEA18;
+extern u16 D_801AEA1A;
+/*
+s32 func_8007BC44(void) {
+    s32 sp18;
+    s32 temp_v0;
+    s32 temp_v0_2;
+    s32 var_a1;
+    u8 *var_v0;
+    u8 *var_v1;
+    u8 temp_t7;
+
+    var_a1 = 0;
+    if (osEepromLongWrite(&D_801540D0, 0, &D_801AEA18, 0x200) != 0) {
+        return 2;
+    }
+    var_v0 = &D_800D8268;
+    var_v1 = &D_801AEA18;
+loop_3:
+    temp_t7 = *var_v0;
+    var_v0 += 1;
+    if (*var_v1 != temp_t7) {
+        var_a1 = 1;
+    } else {
+        var_v1 += 1;
+        if (var_v0 = &D_800D826A) {
+            goto loop_3;
+        }
+    }
+    if (var_a1 == 0) {
+        sp18 = var_a1;
+        temp_v0_2 = func_8007BBF8(&D_801AEA18, var_a1);
+        if (temp_v0_2 != D_801AEA1A) {
+            sp18 = 1;
+            func_8007BBF0();
+            var_a1 = 1;
+        }
+    }
+    if (var_a1 != 0) {
+        temp_v0 = func_8007BDB8();
+        if (temp_v0 != 0) {
+            return temp_v0;
+        }
+    }
+    return 0;
+}
+
+*/
+ #pragma GLOBAL_ASM("asm/nonmatchings/core/game_355D0/func_8007BC44.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/core/game_355D0/func_8007BD20.s")
 

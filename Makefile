@@ -26,11 +26,11 @@ CYAN    := \033[0;36m
 # Directories
 
 BUILD_DIR = build
-ASM_DIRS  = asm asm/libultra #For libultra handwritten files
+ASM_DIRS  = asm/data asm asm/libultra #For libultra handwritten files
 BIN_DIRS  = assets
 
 SRC_DIR   = src
-LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/libc $(SRC_DIR)/os/audio $(SRC_DIR)/libultra_nm
+LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/libc $(SRC_DIR)/os/audio $(SRC_DIR)/libultra_nm $(SRC_DIR)/os/gu
 
 DEFINE_SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/core $(LIBULTRA_SRC_DIRS)
 SRC_DIRS = $(DEFINE_SRC_DIRS)
@@ -174,6 +174,7 @@ ASM_PROCESSOR      = $(PYTHON) $(ASM_PROCESSOR_DIR)/asm_processor.py
 $(BUILD_DIR)/src/os/%.c.o: OPT_FLAGS := -O1
 $(BUILD_DIR)/src/os/audio/%.c.o: OPT_FLAGS := -O2
 $(BUILD_DIR)/src/os/libc/%.c.o: OPT_FLAGS := -O3
+$(BUILD_DIR)/src/os/gu/%.c.o: OPT_FLAGS := -O3
 
 ### Targets
 

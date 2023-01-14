@@ -103,8 +103,8 @@ segments:
       - [0x815E0, c, libultra_nm/UnkLibultraSeg_815E0]
       - [0x81810, hasm, libultra/sqrtf]
       - [0x81820, c, game_81820] #Game segment
-      - [0x81B80, asm, guOrtho] #sucks
-      - [0x81D40, c, os/guTranslate] #TODO
+      - [0x81B80, asm, guOrtho]
+      - [0x81D40, c, os/gu/guTranslate] #TODO
       - [0x81DE0, c, libultra_nm/UnkLibultraSeg_81DE0] #gu funcs
       - [0x822A0, c, libultra_nm/UnkLibultraSeg_822A0]
       - [0x82AD0, c, os/osEepromLongWrite]
@@ -173,13 +173,15 @@ segments:
       - [0x8C920, c, os/libc/ldiv]
       - [0x8CAB0, asm]
 
-  - name: Chunk1 #First Seg
+  - name: SEG1 #
     type: bin
     start: 0x8CDB0
-    #vram: 0x80046800
-    #subsegments:
-      #- [	]
-
+    vram:  0x8016AE0
+#    subsegments:
+ #     - [0x1AE660, rodata]
+  #    - [0x1D11D0, rodata]
+   #   - [0x1E5860, rodata]
+    #  - [0x1EFCF0, rodata]
 
 
 
