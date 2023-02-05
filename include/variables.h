@@ -3,9 +3,13 @@
 extern s32 D_80151950;
 extern s32 D_80151948;
 extern s32 D_8015194C;
-extern Gfx* D_80151944;
+extern Gfx* gDisplayListHead;
 extern OSMesgQueue *D_80154130;
 extern s32 D_801542B4;
+
+//0x8009
+extern s32 D_80151948;
+extern s32 D_801542C0[];
 
 //0x800D
 extern s32 __additional_scanline;

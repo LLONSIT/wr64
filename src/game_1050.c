@@ -18,12 +18,11 @@ void func_800468AC(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1050/func_800468E0.s")
 
-extern Gfx* D_80151944;
 
 void func_80046BF4(void) {
 
-  gDPFullSync(D_80151944++);
-  gSPEndDisplayList(D_80151944++);
+  gDPFullSync(gDisplayListHead++);
+  gSPEndDisplayList(gDisplayListHead++);
 
 }
 
