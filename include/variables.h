@@ -43,3 +43,21 @@ extern s32 D_800D4604;
 extern OSThread *D_801539E0;
 extern void* D_80151DE0;
 extern s32 D_801542B8;
+
+//document this
+//0x8004
+extern Gfx *D_1000000; //local disply list
+extern Gfx *D_1000098;
+extern s32 D_800D45D8;
+extern s32 D_800D45DC[];
+extern s32 D_800D45E4;
+extern s32 D_800D45E8;
+extern s32 D_800D45F0;
+extern s32 D_800DAB1C;
+extern s32 D_800DAB28;
+extern void* D_8011EDE0;
+extern void* D_801518B8;
+extern s32 D_80151948;
+extern s32 D_80151984;
+extern s32 D_801542C0[]; //tex save?
+extern void* D_801CE5F8;
