@@ -40,10 +40,10 @@ void func_80098548(struct_80098548 *arg0, struct_80098548 *arg1) {
 }
 
 
-UNUSED func_80098564(void) {
+UNUSED void func_80098564(void) {
 }
 
-UNUSED func_8009856C(void) {
+UNUSED void func_8009856C(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_80098574.s")
@@ -64,7 +64,7 @@ UNUSED func_8009856C(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_800989E0.s")
 
-UNUSED func_80098A5C(void) {
+UNUSED void func_80098A5C(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_80098A64.s")
@@ -176,7 +176,7 @@ void func_8009B0C8(s32 arg0) {
 }
 
 
-UNUSED func_8009B100(void) {
+UNUSED void func_8009B100(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009B108.s")
@@ -221,7 +221,7 @@ UNUSED func_8009B100(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009BE40.s")
 
-UNUSED func_8009BEB4(void) {
+UNUSED void func_8009BEB4(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009BEBC.s")
@@ -240,7 +240,7 @@ UNUSED func_8009BEB4(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009C00C.s")
 
-UNUSED func_8009C03C(void) {
+UNUSED void func_8009C03C(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_52CD0/func_8009C044.s")

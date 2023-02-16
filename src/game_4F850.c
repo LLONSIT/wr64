@@ -14,7 +14,7 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_800963CC.s")
 
-UNUSED func_800964C4(void) {
+UNUSED void func_800964C4(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_800964CC.s")
@@ -37,7 +37,7 @@ UNUSED func_800964C4(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_80098048.s")
 
-UNUSED func_800980C8(void) {
+UNUSED void func_800980C8(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_800980D0.s")

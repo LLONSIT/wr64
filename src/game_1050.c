@@ -1,5 +1,6 @@
 #include <ultra64.h>
 #include <PR/gbi.h>
+#include <PR/os.h>
 #include "variables.h"
 #include "functions.h"
 #include "structs.h"
@@ -24,7 +25,7 @@ void func_800468E0(void) {
     s32* sp24;
     */
 
-    gSPSegment(gDisplayListHead++, 0x00, 0x6000000000);
+    gSPSegment(gDisplayListHead++, 0x00, 0);
     gSPSegment(gDisplayListHead++, 0x01, D_80151984);
     gSPSegment(gDisplayListHead++, 0x02, osVirtualToPhysical(&D_8011EDE0));
     gSPSegment(gDisplayListHead++, 0x03, osVirtualToPhysical(D_801518B8));
@@ -40,20 +41,20 @@ void func_800468E0(void) {
          gSPDisplayList(gDisplayListHead++, &D_1000000);
 
     }
-    switch (D_800DAB1C) {                           /* irregular */
+    switch (D_800DAB1C) {
     case 0:
         gDPPipeSync(gDisplayListHead++);
-        gDPSetColorImage(gDisplayListHead++, G_IM_FMT_RGBA, G_IM_SIZ_16b, 320, D_801542C0[D_80151948] + 0x80000000 );
+        gDPSetColorImage(gDisplayListHead++, G_IM_FMT_RGBA, G_IM_SIZ_16b, 320, OS_PHYSICAL_TO_K0(D_801542C0[D_80151948]));
         return;
     case 1:
     case 2:
-        gSPSegment(gDisplayListHead++, 0x04, D_801542C0[0xC-10+1] + 0x80000000); //probably fake?
+        gSPSegment(gDisplayListHead++, 0x04, OS_PHYSICAL_TO_K0(D_801542C0[0xC-10+1])); //probably fake?
         gDPPipeSync(gDisplayListHead++);
-        gDPSetColorImage(gDisplayListHead++, G_IM_FMT_RGBA, G_IM_SIZ_16b, 320, D_801542C0[0xC-10+1] + 0x80000000);
+        gDPSetColorImage(gDisplayListHead++, G_IM_FMT_RGBA, G_IM_SIZ_16b, 320, OS_PHYSICAL_TO_K0(D_801542C0[0xC-10+1]));
         return;
     case 3:
         gDPPipeSync(gDisplayListHead++);
-        gDPSetColorImage(gDisplayListHead++, G_IM_FMT_RGBA, G_IM_SIZ_16b, 640, D_800D45DC[D_800D45D8] + 0x80000000);
+        gDPSetColorImage(gDisplayListHead++, G_IM_FMT_RGBA, G_IM_SIZ_16b, 640, OS_PHYSICAL_TO_K0(D_800D45DC[D_800D45D8]));
         return;
     }
 }
@@ -74,7 +75,7 @@ void func_80046BF4(void) {
 //interesting...
 void func_80046CF8(s32 arg0) {
     first_task = arg0;
-    osSendMesg(&D_80154130, 0x15, 0);
+    osSendMesg(&D_80154130, 0x15, OS_MESG_NOBLOCK);
 }
 
 

@@ -1,6 +1,6 @@
 #include "common.h"
 
-UNUSED func_80051530(void) {
+UNUSED void func_80051530(void) {
 }
 
 
