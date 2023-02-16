@@ -83,7 +83,7 @@ A early decompilation of a game with many waves!
 
 ```
 
-- Copy the Wave Race 64 USA Rom to ``baserom.z64``
+- Copy the Wave Race 64 USA Rom to ``baserom.us.z64``
 
 Assuming that you cloned the repository with --recursive
 
