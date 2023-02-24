@@ -1,6 +1,7 @@
 #include "common.h"
 
 extern struct_801C1F84 *D_801C1F84;
+extern struct_801C1F84 *D_801C1F88;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80071E70.s")
 
@@ -33,7 +34,21 @@ void func_80074368(f32 arg0, f32 arg1, s32 *firstMatchIndex, s32 *lastMatchIndex
     }
 }
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80074448.s")
+s32 func_80074448(f32 arg0, f32 arg1) {
+	s32 matchFound;
+    s32 i;
+
+	matchFound = FALSE;
+	for (i = 0; D_801C1F88[i].unk0 != D_801C1F88[i].unk4; i++) {
+		if (   (D_801C1F88[i].unk0 <= arg0) && (D_801C1F88[i].unk4 >= arg0)
+			&& (D_801C1F88[i].unk8 <= arg1) && (D_801C1F88[i].unkC >= arg1)
+		) {
+			matchFound = TRUE;
+			break;
+		}
+	}
+	return matchFound;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_800744EC.s")
 
