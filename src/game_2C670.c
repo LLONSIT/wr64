@@ -1,5 +1,7 @@
 #include "common.h"
 
+extern struct_801C1F84 *D_801C1F84;
+
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80071E70.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_800735EC.s")
@@ -10,30 +12,22 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80074264.s")
 
-//16 bytes
-typedef struct unk801C1F84 {
-	f32 unk0;
-	f32 unk4;
-	f32 unk8;
-	f32 unkC;
-} unk801C1F84;
-extern unk801C1F84 *D_801C1F84;
-void func_80074368(f32 arg0, f32 arg1, s32 *arg2, s32 *arg3) {
+void func_80074368(f32 arg0, f32 arg1, s32 *firstMatchIndex, s32 *lastMatchIndex) {
     s32 firstMatchFound;
     s32 i;
 
-    *arg3 = -1;
-    *arg2 = -1;
+    *lastMatchIndex = -1; //Default to -1, which means no match found
+    *firstMatchIndex = -1;
     firstMatchFound = FALSE;
 	for (i = 0; (D_801C1F84[i].unk0 != D_801C1F84[i].unk4); i++) {
 		if (   (D_801C1F84[i].unk0 <= arg0) && (D_801C1F84[i].unk4 >= arg0)
 			&& (D_801C1F84[i].unk8 <= arg1) && (D_801C1F84[i].unkC >= arg1)
 		) {
 			if (firstMatchFound == FALSE) {
-				*arg2 = i;
+				*firstMatchIndex = i;
 				firstMatchFound = TRUE;
 			} else {
-				*arg3 = i;
+				*lastMatchIndex = i;
 			}
 		}
     }

@@ -43,4 +43,12 @@ typedef struct {
 
 } struct_801C3C58;
 
+//Size: 0x10 bytes
+typedef struct {
+	f32 unk0;
+	f32 unk4;
+	f32 unk8;
+	f32 unkC;
+} struct_801C1F84;
+
 #endif /* STRUCTS_H */

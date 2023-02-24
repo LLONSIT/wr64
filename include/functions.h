@@ -8,7 +8,11 @@ void func_800B4788(s32 source_id, f32 x_position, f32 y_position, f32 z_position
 
 
 //0x8004
-extern void func_8004A2B4(void); 
+extern void func_8004A2B4(void);
+
+//0x8007
+extern void func_80074368(f32 arg0, f32 arg1, s32 *firstMatchIndex, s32 *lastMatchIndex);
+extern s32 func_80076240(f32 arg0, f32 arg1, f32 arg2, f32 arg3);
 
 //0x8008
 extern void func_80088488(s32 arg0);
