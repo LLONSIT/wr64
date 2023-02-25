@@ -51,4 +51,20 @@ typedef struct {
 	f32 unkC;
 } struct_801C1F84;
 
+// Size: 0x104 bytes - could be an array of a smaller struct
+typedef struct {
+	f32 pad[0x41];
+} struct_801AEE20;
+
+typedef struct {
+	u8 pad00[0x19B];
+	s32 unk19C;
+	u8 pad1AC[0x124];
+	s32 unk2C4;
+	u8 pad2C8[0x24];
+	s32 unk2EC;
+	u8 pad2F0[0x3C];
+	f32 unk32C;
+} struct_800762D0;
+
 #endif /* STRUCTS_H */

@@ -1,7 +1,17 @@
 #include "common.h"
 
+extern f32 D_800E9D94;
 extern struct_801C1F84 *D_801C1F84;
 extern struct_801C1F84 *D_801C1F88;
+extern f32 D_801C39B4;
+extern s32 D_801CE620;
+
+extern struct_801AEE20 *D_801AEE20;
+extern struct_801AEE20 *D_801B2F20;
+extern struct_801AEE20 *D_801B7020;
+extern s32 D_801BB120;
+extern s32 D_801BB124;
+extern s32 D_801BB128;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80071E70.s")
 
@@ -52,8 +62,24 @@ s32 func_80074448(f32 arg0, f32 arg1) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_800744EC.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80075274.s")
+void func_80075274(void) {
+    func_80071E70();
+    if (D_801CE638 != 0x15) {
+        func_800735EC(&D_801AEE20, D_801BB120);
+        if (D_801BB124 != 0) {
+            func_800735EC(&D_801B2F20, D_801BB124);
+        }
+        if (D_801BB128 != 0) {
+            func_800735EC(&D_801B7020, D_801BB128);
+        }
+        func_80073E6C();
+        func_800744EC();
+        func_80075310();
+        func_801FAEA8();
+    }
+}
 
+//Initializes a lot of variables
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80075310.s")
 
 s32 func_80076240(f32 arg0, f32 arg1, f32 arg2, f32 arg3) {
@@ -73,7 +99,22 @@ s32 func_80076240(f32 arg0, f32 arg1, f32 arg2, f32 arg3) {
     return 0;
 }
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_800762D0.s")
+void func_800762D0(struct_800762D0 *arg0) {
+    if (D_801CE638 == 1) {
+        if ((D_801CE620 == 0xB) && (arg0->unk2C4 <= 0)) {
+            arg0->unk2EC = 2;
+        } else if (arg0->unk19C >= 599999) {
+            arg0->unk2EC = 2;
+        } else {
+            arg0->unk2EC = 1;
+        }
+
+        if ((D_801CE620 != 1) || (arg0->unk2EC != 2)) {
+            arg0->unk32C = D_801C39B4;
+            D_801C39B4 += D_800E9D94;
+        }
+    }
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80076378.s")
 
