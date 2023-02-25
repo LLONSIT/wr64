@@ -1,17 +1,19 @@
 #include "common.h"
 
+extern u32 D_800D8170;
 extern f32 D_800E9D94;
+extern f32 D_800E9CCC;
 extern struct_801C1F84 *D_801C1F84;
 extern struct_801C1F84 *D_801C1F88;
 extern f32 D_801C39B4;
 extern s32 D_801CE620;
-
 extern struct_801AEE20 *D_801AEE20;
 extern struct_801AEE20 *D_801B2F20;
 extern struct_801AEE20 *D_801B7020;
 extern s32 D_801BB120;
 extern s32 D_801BB124;
 extern s32 D_801BB128;
+extern struct_801C1F84 *D_801C1F80;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80071E70.s")
 
@@ -21,7 +23,28 @@ extern s32 D_801BB128;
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_800741A4.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_80074264.s")
+s32 func_80074264(f32 arg0, f32 arg1) {
+    s32 i;
+    s32 ret;
+
+    ret = TRUE;
+    if (D_800D8170 == 0) {
+        if(sqrtf((arg0 * arg0) + (arg1 * arg1)) <= D_800E9CCC) {
+            ret = FALSE;
+        }
+    } else {
+
+        for (i = 0; D_801C1F80[i].unk0 != D_801C1F80[i].unk4; i++) {
+            if (   (D_801C1F80[i].unk0 <= arg0) && (D_801C1F80[i].unk4 >= arg0)
+                && (D_801C1F80[i].unk8 <= arg1) && (D_801C1F80[i].unkC >= arg1)
+            ) {
+                ret = FALSE;
+                break;
+            }
+        }
+    }
+    return ret;
+}
 
 void func_80074368(f32 arg0, f32 arg1, s32 *firstMatchIndex, s32 *lastMatchIndex) {
     s32 firstMatchFound;
@@ -30,34 +53,34 @@ void func_80074368(f32 arg0, f32 arg1, s32 *firstMatchIndex, s32 *lastMatchIndex
     *lastMatchIndex = -1; //Default to -1, which means no match found
     *firstMatchIndex = -1;
     firstMatchFound = FALSE;
-	for (i = 0; (D_801C1F84[i].unk0 != D_801C1F84[i].unk4); i++) {
-		if (   (D_801C1F84[i].unk0 <= arg0) && (D_801C1F84[i].unk4 >= arg0)
-			&& (D_801C1F84[i].unk8 <= arg1) && (D_801C1F84[i].unkC >= arg1)
-		) {
-			if (firstMatchFound == FALSE) {
-				*firstMatchIndex = i;
-				firstMatchFound = TRUE;
-			} else {
-				*lastMatchIndex = i;
-			}
-		}
+    for (i = 0; (D_801C1F84[i].unk0 != D_801C1F84[i].unk4); i++) {
+        if (   (D_801C1F84[i].unk0 <= arg0) && (D_801C1F84[i].unk4 >= arg0)
+            && (D_801C1F84[i].unk8 <= arg1) && (D_801C1F84[i].unkC >= arg1)
+        ) {
+            if (firstMatchFound == FALSE) {
+                *firstMatchIndex = i;
+                firstMatchFound = TRUE;
+            } else {
+                *lastMatchIndex = i;
+            }
+        }
     }
 }
 
 s32 func_80074448(f32 arg0, f32 arg1) {
-	s32 matchFound;
+    s32 matchFound;
     s32 i;
 
-	matchFound = FALSE;
-	for (i = 0; D_801C1F88[i].unk0 != D_801C1F88[i].unk4; i++) {
-		if (   (D_801C1F88[i].unk0 <= arg0) && (D_801C1F88[i].unk4 >= arg0)
-			&& (D_801C1F88[i].unk8 <= arg1) && (D_801C1F88[i].unkC >= arg1)
-		) {
-			matchFound = TRUE;
-			break;
-		}
-	}
-	return matchFound;
+    matchFound = FALSE;
+    for (i = 0; D_801C1F88[i].unk0 != D_801C1F88[i].unk4; i++) {
+        if (   (D_801C1F88[i].unk0 <= arg0) && (D_801C1F88[i].unk4 >= arg0)
+            && (D_801C1F88[i].unk8 <= arg1) && (D_801C1F88[i].unkC >= arg1)
+        ) {
+            matchFound = TRUE;
+            break;
+        }
+    }
+    return matchFound;
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_2C670/func_800744EC.s")

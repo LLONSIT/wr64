@@ -14,6 +14,7 @@ extern void func_8004A2B4(void);
 
 //0x8007
 extern void func_80071E70(void);
+extern s32 func_80074264(f32 arg0, f32 arg1);
 extern void func_800735EC(struct_801AEE20 **, s32);
 extern void func_80073E6C(void);
 extern void func_80074368(f32 arg0, f32 arg1, s32 *firstMatchIndex, s32 *lastMatchIndex);
