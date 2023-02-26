@@ -33,7 +33,6 @@ s32 func_80074264(f32 arg0, f32 arg1) {
             ret = FALSE;
         }
     } else {
-
         for (i = 0; D_801C1F80[i].unk0 != D_801C1F80[i].unk4; i++) {
             if (   (D_801C1F80[i].unk0 <= arg0) && (D_801C1F80[i].unk4 >= arg0)
                 && (D_801C1F80[i].unk8 <= arg1) && (D_801C1F80[i].unkC >= arg1)
