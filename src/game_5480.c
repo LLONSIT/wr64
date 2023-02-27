@@ -18,7 +18,10 @@ void func_8004B680(void) {
 void func_8004B688(void) {
 }
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_5480/func_8004B690.s")
+//MIX
+#ifdef COMPILING_LIBULTRA
+#pragma GLOBAL_ASM("asm/nonmatchings/game_5480/osSyncPrintf.s")
+#endif
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_5480/func_8004B6A4.s")
 

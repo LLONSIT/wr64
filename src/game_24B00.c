@@ -1,4 +1,8 @@
-#include "common.h"
+#include <ultra64.h>
+#include <PR/gbi.h> //for macros
+#include "functions.h"
+#include "structs.h"
+#include "variables.h"
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_24B00/func_8006A300.s")
 
@@ -28,7 +32,29 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_24B00/func_8006E01C.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_24B00/func_8006E024.s")
+
+extern s32 D_800D8170;
+extern s32 D_801CE620;
+
+void func_8006E024(Gfx** gDisplayList) {
+    
+    s32 filler[15];
+    Gfx *gDisplayListHead = *gDisplayList;
+    s32 pad2[3];
+
+    gDPPipeSync(gDisplayListHead++);
+    gDPSetTextureLUT(gDisplayListHead++, G_TT_NONE);
+    
+    if ((D_800DAB28 == 1) && (D_800D8170 == 4)) {
+        func_8006C5D8(&gDisplayListHead);
+    }
+    if ((D_801CE638 == 1) && ((D_801CE620 == 4) || (D_801CE620 == 1))) {
+        func_8006BE74(&gDisplayListHead);
+    }
+    func_8006B334(&gDisplayListHead);
+    *gDisplayList = gDisplayListHead;
+}
+
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_24B00/func_8006E0F4.s")
 

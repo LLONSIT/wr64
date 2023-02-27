@@ -43,5 +43,4 @@ void func_80047B00(void) {
 }
 
 
-
 #pragma GLOBAL_ASM("asm/nonmatchings/main/func_80047B20.s")

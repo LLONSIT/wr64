@@ -4,9 +4,9 @@
 #include "functions.h"
 #include "macros.h"
 
-void func_8007A550(Gfx** gDisplayList) {
+UNUSED void func_8007A550(UNUSED Gfx** gDisplayList) {
 
-    Gfx *gDisplayListHead = *gDisplayList;
+    UNUSED Gfx *gDisplayListHead = *gDisplayList;
 
     gDPPipeSync(gDisplayListHead++);
     gDPSetCycleType(gDisplayListHead++, G_CYC_FILL);

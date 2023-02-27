@@ -16,7 +16,6 @@ extern s32 __additional_scanline;
 extern s32 D_800D461C;
 extern s32 D_800DAB1C;
 extern s32 D_800DAB24;
-
 //0x800E
 extern s32 D_800E5138;
 extern f32 D_800E5130;
@@ -33,6 +32,7 @@ extern s32 D_801CE638;
 extern s32 D_801CE63C;
 extern s32 D_801CE640;
 extern s32 D_801CE644;
+extern s32 D_801CE620;
 
 
 //Main
