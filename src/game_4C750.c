@@ -55,7 +55,7 @@ void *func_80093F78(Gfx* gDisplayListHead) {
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_800941D0.s")
 
 //UNUSED
-//This function may be using some kind of printing system with the function "func_801E9858"
+//This function may be using some kind of unused printing system with the function "func_801E9858"
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_80094200.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_80094338.s")
