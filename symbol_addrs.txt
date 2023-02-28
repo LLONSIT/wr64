@@ -126,3 +126,6 @@ gColorRed   = 0x800D47E8;
 gColorGreen = 0x800D47EC;
 gColorBlue  = 0x800D47F0;
 gColorAlpha = 0x800D47F4;
+
+//not a very good name
+configSignalRectangle = 0x8006E024;

@@ -36,15 +36,30 @@
 extern s32 D_800D8170;
 extern s32 D_801CE620;
 
-void func_8006E024(Gfx** gDisplayList) {
-    
-    s32 filler[15];
+
+
+/*******************************************************************************
+*
+* INFO:  This function apparently configure the
+*	  "texture lookup table"
+*
+*   The clearest use that can be seen is that it is related to the appearance,
+*   of color in signs or arrows.
+*
+*
+********************************************************************************/
+
+
+void configSignalRectangle(Gfx** gDisplayList) {
+
+    UNUSED s32 filler[15];
     Gfx *gDisplayListHead = *gDisplayList;
-    s32 pad2[3];
+    UNUSED s32 second_filler[3];
 
     gDPPipeSync(gDisplayListHead++);
+    //Color
     gDPSetTextureLUT(gDisplayListHead++, G_TT_NONE);
-    
+
     if ((D_800DAB28 == 1) && (D_800D8170 == 4)) {
         func_8006C5D8(&gDisplayListHead);
     }

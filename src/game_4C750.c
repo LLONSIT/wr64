@@ -18,6 +18,8 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_80093104.s")
 
+
+UNUSED
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_8009328C.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_800933C4.s")
