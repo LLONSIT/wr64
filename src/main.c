@@ -4,7 +4,11 @@
 #include "variables.h"
 #include "functions.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/main/func_80047470.s")
+void func_80047470(void) {
+    osSpTaskYield();
+    D_800D4600 = 1;
+    D_800D4604 = 1;
+}
 
 void func_800474A0(void) {
     osSpTaskLoad(second_task);

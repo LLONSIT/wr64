@@ -1,5 +1,6 @@
 #include <ultra64.h>
 #include <PR/gbi.h> //for macros
+#include "macros.h" //another macros
 #include "functions.h"
 #include "structs.h"
 #include "variables.h"
