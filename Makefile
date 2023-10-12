@@ -1,6 +1,6 @@
 #forked from mkst/sssv
 #*******************************************************************
-#		Makefile For Application
+#		Makefile For Game
 #
 #			Wave Race 64
 #

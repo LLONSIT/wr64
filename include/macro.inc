@@ -23,3 +23,8 @@
 .macro move a, b
     addu \a, \b, $zero
 .endm
+
+.macro jlabel label
+    \label:
+.endm
+
