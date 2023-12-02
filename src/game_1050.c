@@ -16,15 +16,8 @@ void func_800468AC(void) {
     D_8015194C = temp_t7;
 }
 
+//F3D: OK
 void func_800468E0(void) {
-
-    //unused stack size?
-    /*
-    s32* sp2C;
-    s32* sp28;
-    s32* sp24;
-    */
-
     gSPSegment(gDisplayListHead++, 0x00, 0);
     gSPSegment(gDisplayListHead++, 0x01, D_80151984);
     gSPSegment(gDisplayListHead++, 0x02, osVirtualToPhysical(&D_8011EDE0));
@@ -35,7 +28,6 @@ void func_800468E0(void) {
     gSPSegment(gDisplayListHead++, 0x0E, D_800D45E8);
 
     if (D_800DAB28 == 2) {
-
         gSPDisplayList(gDisplayListHead++, &D_1000098);
     } else {
          gSPDisplayList(gDisplayListHead++, &D_1000000);
@@ -61,9 +53,8 @@ void func_800468E0(void) {
 
 //#pragma GLOBAL_ASM("asm/nonmatchings/game_1050/func_800468E0.s")
 
-
+//F3D: OK
 void func_80046BF4(void) {
-
   gDPFullSync(gDisplayListHead++);
   gSPEndDisplayList(gDisplayListHead++);
 

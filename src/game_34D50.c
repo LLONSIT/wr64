@@ -4,6 +4,7 @@
 #include "functions.h"
 #include "macros.h"
 
+//F3D: OK
 UNUSED void func_8007A550(UNUSED Gfx** gDisplayList) {
 
     UNUSED Gfx *gDisplayListHead = *gDisplayList;

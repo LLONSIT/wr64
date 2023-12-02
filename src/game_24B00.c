@@ -39,18 +39,20 @@ extern s32 D_801CE620;
 
 
 
-/*******************************************************************************
+/******************************************************************************
 *
-* INFO:  This function apparently configure the
+* !< This function apparently configure the
 *	  "texture lookup table"
 *
-*   The clearest use that can be seen is that it is related to the appearance,
+*   !< The clearest use that can be seen is that it is related to the appearance,
 *   of color in signs or arrows.
 *
+*	@param1: (gDisplayList) this functions takes the gfx pointer to
+*       "Set the texel type of the texture lookup table (TLUT)"
 *
 ********************************************************************************/
 
-
+//F3D: OK
 void configSignalRectangle(Gfx** gDisplayList) {
 
     UNUSED s32 filler[15];
