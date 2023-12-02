@@ -181,5 +181,48 @@ segments:
     type: bin
     start: 0x8DEF0
 
+  - name: mio0_seg_1AE660
+    type: bin
+    start: 0x1AE660
+
+  - name: mio0_seg_1E5860
+    type: bin
+    start: 0x1E5860
+
+  - name: mio_seg_1ECFCF0
+    type: bin
+    start: 0x1EFCF0
+
+  - name: mio_seg_1FB270
+    type: bin
+    start: 0x1FB270
+
+  - name: mio_seg_208980
+    type: bin
+    start: 0x208980
+
+  - name: mio_seg_20F940
+    type: bin
+    start: 0x20F940
+
+  - name: mio_seg_217630
+    type: bin
+    start: 0x217630
+
+  - name: mio_seg_221A60
+    type: bin
+    start: 0x221A60
+
+  - name: mio_seg_2293E0
+    type: bin
+    start: 0x2293E0
+
+  - name: mio_seg_234420
+    type: bin
+    start: 0x234420
+
+  - name: mio_seg_241070
+    type: bin
+    start: 0x241070
 
   - [0x800000]
