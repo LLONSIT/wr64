@@ -225,4 +225,476 @@ segments:
     type: bin
     start: 0x241070
 
+  - name: mio_seg_243540
+    type: bin
+    start: 0x243540
+
+  - name: mio_seg_245430
+    type: bin
+    start: 0x245430
+
+  - name: mio_seg_247C20
+    type: bin
+    start: 0x247C20
+
+  - name: mio_seg_24B440
+    type: bin
+    start: 0x24B440
+
+  - name: mio_seg_24E570
+    type: bin
+    start: 0x24E570
+
+  - name: mio_seg_250CB0
+    type: bin
+    start: 0x250CB0
+
+  - name: mio_seg_254F70
+    type: bin
+    start: 0x254F70
+
+  - name: mio_seg_257D40
+    type: bin
+    start: 0x257D40
+
+  - name: mio_seg_2631D0
+    type: bin
+    start: 0x2631D0
+
+  - name: mio_seg_268040
+    type: bin
+    start: 0x268040
+
+  - name: mio_seg_271E00
+    type: bin
+    start: 0x271E00
+
+  - name: mio_seg_2789E0
+    type: bin
+    start: 0x2789E0
+
+  - name: mio_seg_2829A0
+    type: bin
+    start: 0x2829A0
+
+  - name: mio_seg_289570
+    type: bin
+    start: 0x289570
+
+  - name: mio_seg_295DB0
+    type: bin
+    start: 0x295DB0
+
+  - name: mio_seg_29CB00
+    type: bin
+    start: 0x29CB00
+
+  - name: mio_seg_29F7E0
+    type: bin
+    start: 0x29F7E0
+
+  - name: mio_seg_2A2150
+    type: bin
+    start: 0x2A2150
+
+  - name: mio_seg_2E5FB0
+    type: bin
+    start: 0x2E5FB0
+
+  - name: mio_seg_2F9BE0
+    type: bin
+    start: 0x2F9BE0
+
+  - name: mio_seg_30BC50
+    type: bin
+    start: 0x30BC50
+
+  - name: mio_seg_30EC20
+    type: bin
+    start: 0x30EC20
+
+  - name: mio_seg_313A90
+    type: bin
+    start: 0x313A90
+
+  - name: Race_position_numbers
+    type: bin
+    start: 0x317270
+
+  - name: mio_seg_31CF40
+    type: bin
+    start: 0x31CF40
+
+  - name: mio_seg_320D10
+    type: bin
+    start: 0x320D10
+
+  - name: mio_seg_327E90
+    type: bin
+    start: 0x327E90
+
+  - name: mio_seg_32B8C0
+    type: bin
+    start: 0x32B8C0
+
+  - name: mio_seg_32B8E0
+    type: bin
+    start: 0x32B8E0
+
+  - name: mio_seg_330990
+    type: bin
+    start: 0x330990
+
+  - name: mio_seg_3320E0
+    type: bin
+    start: 0x3320E0
+
+  - name: mio_seg_333340
+    type: bin
+    start: 0x333340
+
+  - name: mio_seg_333960
+    type: bin
+    start: 0x333960
+
+  - name: mio_seg_333E60
+    type: bin
+    start: 0x333E60
+
+  - name: mio_seg_336790
+    type: bin
+    start: 0x336790
+
+  - name: mio_seg_337780
+    type: bin
+    start: 0x337780
+
+  - name: mio_seg_338470
+    type: bin
+    start: 0x338470
+
+  - name: mio_seg_3396A0
+    type: bin
+    start: 0x3396A0
+
+  - name: mio_seg_33AD40
+    type: bin
+    start: 0x33AD40
+
+  - name: mio_seg_33B7F0
+    type: bin
+    start: 0x33B7F0
+
+  - name: mio_seg_33BEB0
+    type: bin
+    start: 0x33BEB0
+
+  - name: mio_seg_340F20
+    type: bin
+    start: 0x340F20
+
+  - name: mio_seg_3423E0
+    type: bin
+    start: 0x3423E0
+
+  - name: mio_seg_345D70
+    type: bin
+    start: 0x345D70
+
+  - name: mio_seg_351260
+    type: bin
+    start: 0x351260
+
+  - name: mio_seg_352CA0
+    type: bin
+    start: 0x352CA0
+
+  - name: mio_seg_354290
+    type: bin
+    start: 0x354290
+
+  - name: mio_seg_3567F0
+    type: bin
+    start: 0x3567F0
+
+  - name: mio_seg_358CE0
+    type: bin
+    start: 0x358CE0
+
+  - name: mio_seg_35AA80
+    type: bin
+    start: 0x35AA80
+
+  - name: mio_seg_35C4C0
+    type: bin
+    start: 0x35C4C0
+
+  - name: mio_seg_35E370
+    type: bin
+    start: 0x35E370
+
+  - name: mio_seg_35FCB0
+    type: bin
+    start: 0x35FCB0
+
+  - name: mio_seg_361A90
+    type: bin
+    start: 0x361A90
+
+  - name: mio_seg_361BA0
+    type: bin
+    start: 0x361BA0
+
+  - name: mio_seg_361C30
+    type: bin
+    start: 0x361C30
+
+  - name: mio_seg_361D20
+    type: bin
+    start: 0x361D20
+
+  - name: mio_seg_361DB0
+    type: bin
+    start: 0x361DB0
+
+  - name: mio_seg_361EC0
+    type: bin
+    start: 0x361EC0
+
+  - name: mio_seg_361FB0
+    type: bin
+    start: 0x361FB0
+
+  - name: mio_seg_3620B0
+    type: bin
+    start: 0x3620B0
+
+  - name: mio_seg_362DE0
+    type: bin
+    start: 0x362DE0
+
+  - name: mio_seg_363D60
+    type: bin
+    start: 0x363D60
+
+  - name: mio_seg_364950
+    type: bin
+    start: 0x364950
+
+  - name: mio_seg_3654F0
+    type: bin
+    start: 0x3654F0
+
+  - name: mio_seg_365EC0
+    type: bin
+    start: 0x365EC0
+
+  - name: mio_seg_366B40
+    type: bin
+    start: 0x366B40
+
+  - name: mio_seg_3679D0
+    type: bin
+    start: 0x3679D0
+
+  - name: mio_seg_3684B0
+    type: bin
+    start: 0x3684B0
+
+  - name: mio_seg_368910
+    type: bin
+    start: 0x368910
+
+  - name: mio_seg_368FB0
+    type: bin
+    start: 0x368FB0
+
+  - name: mio_seg_3694C0
+    type: bin
+    start: 0x3694C0
+
+  - name: mio_seg_369950
+    type: bin
+    start: 0x369950
+
+  - name: mio_seg_369EE0
+    type: bin
+    start: 0x369EE0
+
+  - name: mio_seg_36A4B0
+    type: bin
+    start: 0x36A4B0
+
+  - name: mio_seg_36A9D0
+    type: bin
+    start: 0x36A9D0
+
+  - name: mio_seg_36AE80
+    type: bin
+    start: 0x36AE80
+
+  - name: mio_seg_36B5F0
+    type: bin
+    start: 0x36B5F0
+
+  - name: mio_seg_36BBD0
+    type: bin
+    start: 0x36BBD0
+
+  - name: mio_seg_36C210
+    type: bin
+    start: 0x36C210
+
+  - name: mio_seg_36CDC0
+    type: bin
+    start: 0x36CDC0
+
+  - name: mio_seg_36D820
+    type: bin
+    start: 0x36D820
+
+  - name: mio_seg_36E020
+    type: bin
+    start: 0x36E020
+
+  - name: mio_seg_36E9B0
+    type: bin
+    start: 0x36E9B0
+
+  - name: mio_seg_36F2B0
+    type: bin
+    start: 0x36F2B0
+
+  - name: mio_seg_36FD40
+    type: bin
+    start: 0x36FD40
+
+  - name: mio_seg_370F20
+    type: bin
+    start: 0x370F20
+
+  - name: mio_seg_3718B0
+    type: bin
+    start: 0x3718B0
+
+  - name: mio_seg_3721B0
+    type: bin
+    start: 0x3721B0
+
+  - name: mio_seg_372AB0
+    type: bin
+    start: 0x372AB0
+
+  - name: mio_seg_3733B0
+    type: bin
+    start: 0x3733B0
+
+  - name: mio_seg_3738D0
+    type: bin
+    start: 0x3738D0
+
+  - name: mio_seg_374100
+    type: bin
+    start: 0x374100
+
+  - name: mio_seg_37D000
+    type: bin
+    start: 0x37D000
+
+  - name: mio_seg_381A40
+    type: bin
+    start: 0x381A40
+
+  - name: mio_seg_38A900
+    type: bin
+    start: 0x38A900
+
+  - name: mio_seg_38F8B0
+    type: bin
+    start: 0x38F8B0
+
+  - name: mio_seg_398830
+    type: bin
+    start: 0x398830
+
+  - name: mio_seg_39D300
+    type: bin
+    start: 0x39D300
+
+  - name: mio_seg_3A6540
+    type: bin
+    start: 0x3A6540
+
+  - name: mio_seg_3AB060
+    type: bin
+    start: 0x3AB060
+
+  - name: mio_seg_3B3EB0
+    type: bin
+    start: 0x3B3EB0
+
+  - name: mio_seg_3B8900
+    type: bin
+    start: 0x3B8900
+
+  - name: mio_seg_3C15F0
+    type: bin
+    start: 0x3C15F0
+
+  - name: mio_seg_3C6590
+    type: bin
+    start: 0x3C6590
+
+  - name: mio_seg_3CF0A0
+    type: bin
+    start: 0x3CF0A0
+
+  - name: mio_seg_3D3A90
+    type: bin
+    start: 0x3D3A90
+
+  - name: mio_seg_3DCCF0
+    type: bin
+    start: 0x3DCCF0
+
+  - name: mio_seg_3E17A0
+    type: bin
+    start: 0x3E17A0
+
+  - name: mio_seg_3E8EE0
+    type: bin
+    start: 0x3E8EE0
+
+  - name: mio_seg_3EACF0
+    type: bin
+    start: 0x3EACF0
+
+  - name: mio_seg_3EE830
+    type: bin
+    start: 0x3EE830
+
+  - name: mio_seg_3EF030
+    type: bin
+    start: 0x3EF030
+
+  - name: mio_seg_3EF8C0
+    type: bin
+    start: 0x3EF8C0
+
+  - name: mio_seg_3F13D0
+    type: bin
+    start: 0x3F13D0
+
+  - name: mio_seg_3F46F0
+    type: bin
+    start: 0x3F46F0
+
+  - name: mio_seg_3F5A30
+    type: bin
+    start: 0x3F5A30
+
+  - name: mio_seg_405810
+    type: bin
+    start: 0x405810
+
   - [0x800000]

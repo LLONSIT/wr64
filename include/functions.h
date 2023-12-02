@@ -1,6 +1,6 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
-
+#include <ultra64.h>
 #include "structs.h"
 
 //0x800B
@@ -33,5 +33,14 @@ extern void func_800988D8(s32 arg0);
 //0x801F
 extern void func_801FAEA8(void);
 
+//?
+extern void func_800C6DE0(void);
+extern void func_8006C5D8(Gfx**);
+extern void func_8006BE74(Gfx**);
+extern void func_8006B334(Gfx**);
+extern void func_8009ADA8(void);
+extern void func_8009A460(s32, s32, s32, s32); //TODO: UNK TYPE here
+extern void func_800C53D4(s32, s32);
+extern void func_800C312C(void);
 
 #endif /*FUNCTIONS_H*/

@@ -8,7 +8,6 @@
 #
 #******************************************************************
 
-
 BASENAME  = waverace64
 VERSION  := us
 
@@ -95,27 +94,12 @@ endif
 
 SPLAT    = $(TOOLS_DIR)/splat/split.py
 
-NRDC ?= 0
-$(eval $(call validate-option,NRDC,0 1))
-
-
-ifeq ($(NRDC),1)
-  # Verify that qemu-irix exists
-  QEMU_IRIX := $(call find-command,qemu-irix)
-  ifeq (,$(QEMU_IRIX))
-    $(error Using the Nintendo Master Data Utility requires qemu-irix. Please install qemu-irix package or set the QEMU_IRIX environment variable to the full qemu-irix binary path)
-  endif
-endif
 
 #
 # -i initial code
 # -t title patch
-#
-ifeq ($(NRDC),1)
-	CRC := @$(QEMU_IRIX) -silent -L $(TOOLS_DIR)/ido5.3_cc $(TOOLS_DIR)/nrdc -b -c -iNWRE -t"WAVE RACE 64" build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
-	else
-	CRC := @tools/n64crc build/$(BASENAME).us.z64
-	endif
+# NRDC Decompiled :)
+	CRC := @$(TOOLS_DIR)/nrdc_decompilation/nrdc -b -c -iNWRE -t"WAVE RACE 64" build/$(BASENAME).$(VERSION).z64 #Recalculating the CRC
 
 OPT_FLAGS      = -O2
 LOOP_UNROLL    =
@@ -222,31 +206,30 @@ distclean: clean
 
 
 ### Recipes
-
 .baserom.$(VERSION).ok: baserom.$(VERSION).z64
 	@echo "$$(cat $(BASENAME).$(VERSION).sha1)  $<" | sha1sum --check
 	@touch $@
 
 $(TARGET).elf: dirs $(BASENAME).ld $(BUILD_DIR)/$(LIBULTRA) $(O_FILES) $(LANG_RNC_O_FILES) $(IMAGE_O_FILES)
 	@$(LD) $(LD_FLAGS) $(LD_FLAGS_EXTRA) -o $@
-	@printf "[$(PINK) Linker $(NO_COL)]  $<\n"
+	@printf "[$(PINK) GNU Linker $(NO_COL)]  $<\n"
 
 ifndef PERMUTER
 $(GLOBAL_ASM_O_FILES): $(BUILD_DIR)/%.c.o: %.c  include/variables.h include/structs.h
 	@$(CC_CHECK) $<
-	@printf "[$(YELLOW) check $(NO_COL)] $<\n"
+	@printf "[$(YELLOW) GCC Syntax check $(NO_COL)] $<\n"
 	@$(ASM_PROCESSOR) $(OPT_FLAGS) $< > $(BUILD_DIR)/$<
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $(BUILD_DIR)/$<
 	@$(ASM_PROCESSOR) $(OPT_FLAGS) $< --post-process $@ \
 		--assembler "$(AS) $(ASFLAGS)" --asm-prelude $(ASM_PROCESSOR_DIR)/prelude.inc
-	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
+	@printf "[$(GREEN) IRIS Development Option 5.3 $(NO_COL)]  $<\n" 
 endif
 
 # non asm-processor recipe
 $(BUILD_DIR)/%.c.o: %.c
 #	@$(CC_CHECK) $<
 	@$(CC) -c $(CFLAGS) $(OPT_FLAGS) $(LOOP_UNROLL) $(MIPSISET) -o $@ $<
-	@printf "[$(GREEN) ido5.3 $(NO_COL)]  $<\n"
+	@printf "[$(GREEN) IRIS Development Option 5.3 $(NO_COL)]  $<\n"
 
 
 
@@ -259,20 +242,20 @@ $(BUILD_DIR)/$(LIBULTRA): $(LIBULTRA)
 
 $(BUILD_DIR)/%.s.o: %.s
 	@$(AS) $(ASFLAGS) -o $@ $<
-	@printf "[$(GREEN)  ASSEMBLER   $(NO_COL)]  $<\n"
+	@printf "[$(GREEN) MIPS GNU Assembler   $(NO_COL)]  $<\n"
 
 $(BUILD_DIR)/%.bin.o: %.bin
 	@$(LD) -r -b binary -o $@ $<
-	@printf "[$(PINK) Linker $(NO_COL)]  $<\n"
+	@printf "[$(PINK) MIPS GNU Linker $(NO_COL)]  $<\n"
 
 $(TARGET).bin: $(TARGET).elf
 	@$(OBJCOPY) $(OBJCOPYFLAGS) $< $@
-	@printf "[$(CYAN) Objcopy $(NO_COL)]  $<\n"
+	@printf "[$(CYAN) GNU Objcopy $(NO_COL)]  $<\n"
 
 $(TARGET).z64: $(TARGET).bin
 	@printf "[$(BLUE) CopyRom $(NO_COL)]  $<\n"
 	@tools/CopyRom.py $< $@ #Mask
-	@printf "[$(GREEN) CRC $(NO_COL)]  $<\n"
+	@printf "[$(GREEN) Calculating CRC $(NO_COL)]  $<\n"
 	@$(CRC)
 
 # fake targets for better error handling

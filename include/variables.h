@@ -4,7 +4,7 @@ extern s32 D_80151950;
 extern s32 D_80151948;
 extern s32 D_8015194C;
 extern Gfx* gDisplayListHead;
-extern OSMesgQueue *D_80154130;
+extern OSMesgQueue D_80154130;
 extern s32 D_801542B4;
 
 //0x8009

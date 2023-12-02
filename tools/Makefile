@@ -12,6 +12,7 @@
 default:
 	@$(CC) n64crc.c -o n64crc
 	@make  -C  ido5.3_recomp
+	@make -C nrdc_decompilation
 	@printf "done\n"
 
 clean:
