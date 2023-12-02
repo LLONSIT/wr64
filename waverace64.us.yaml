@@ -38,8 +38,8 @@ segments:
 
 
      #Game layout
-
-     #First_Segment (texture bin compressed segment?) -> Game code -> libultra_Segment
+     #                                Is the overlay compressed?
+     #Main Segment -> ucode -> Data/Rodata -> MIO_SEGMENT | Overlay
 
       - [0x1000, hasm, entrypoint]
       - [0x1050, c, game_1050] #Some GFX macros
@@ -172,16 +172,19 @@ segments:
       - [0x8C8B0, hasm, libultra/getcause]
       - [0x8C8C0, c, os/__osAtomicDec]
       - [0x8C920, c, os/libc/ldiv]
-      - [0x8CAB0, asm, fast3d_part1] #Putting this one in the same segment
-      #- [0x8CBE0, bin, fast3d_part2]
-      #- [0x8D8E0, bin, fast3d_audio]
-     #- [0x1AE660, bin]
+      - [0x8CAB0, asm, fast3d_part1] #TODO: Put these on a separated segment
+      - [0x8CBE0, bin, fast3d_part2]
+      - [0x8D8E0, bin, fast3d_audio]
 
-  - name: unk_bin
-    type: bin
-    start: 0x8CDB0
+  - name: next_bin #Data and Rodata for the main overlay??
+    type: code
+    start: 0x8D8F0 #Needs to be 0x16 Aligned
+    subsegments:
+    - [0x8D8F0, bin]
+    - [0x97780, bin, Initial_loading_image] #rgba16
+    - [0x9F580, bin]
 
-  - name: MIO_SEGMENT
+  - name: MIO0_OVERLAY
     type: code
     start: 0x1AE660
     subsegments:
