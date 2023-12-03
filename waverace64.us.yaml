@@ -184,6 +184,23 @@ segments:
     - [0x97780, bin, Initial_loading_image] #rgba16
     - [0x9F580, bin]
 
+    #Q: Why are putting this here?
+    #A: Because it has a different vram
+  - name: overlay_A95D0
+    type: code
+    start: 0xA95D0
+    vram: 0x801DAFA0
+    subsegments:
+    - [0xA95D0, c, overlay_A95D0]
+    - [0xAF8C0, c, overlay_AF8C0] #Need to split more files from the overlay
+    - [0xB2510, c, overlay_B2510]
+    - [0xB2A70, c, overlay_B2A70]
+    - [0xB3AA0, c, overlay_B3AA0]
+    - [0xB55E0, c, overlay_B55E0]
+    - [0xB66E0, c, overlay_B66E0]
+    - [0xCAE70, bin]
+
+
   - name: MIO0_OVERLAY
     type: code
     start: 0x1AE660

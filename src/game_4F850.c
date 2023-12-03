@@ -1,6 +1,6 @@
 #include "common.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_80095050.s")
+#pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/unk_game_load.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_80095A28.s")
 
@@ -14,7 +14,7 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_800963CC.s")
 
-UNUSED void func_800964C4(void) {
+void func_800964C4(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_800964CC.s")
@@ -37,7 +37,7 @@ UNUSED void func_800964C4(void) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_80098048.s")
 
-UNUSED void func_800980C8(void) {
+void func_800980C8(void) {
 }
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4F850/func_800980D0.s")
