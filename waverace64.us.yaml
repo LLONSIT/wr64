@@ -180,7 +180,7 @@ segments:
     type: bin
     start: 0x8EDF0 #Needs to be 0x16 Aligned
 
-    #Q: Why are putting this here?
+    #Q: Why are you putting this here?
     #A: Because it has a different vram
   - name: overlay_A95D0
     type: code
