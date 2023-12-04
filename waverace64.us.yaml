@@ -177,10 +177,8 @@ segments:
       - [0x8DFB0, bin, fast3d_audio]
 
   - name: next_bin #Data and Rodata for the main overlay??
-    type: code
+    type: bin
     start: 0x8EDF0 #Needs to be 0x16 Aligned
-    subsegments:
-    - [0x8EDF0, bin]
 
     #Q: Why are putting this here?
     #A: Because it has a different vram
@@ -188,6 +186,7 @@ segments:
     type: code
     start: 0xA95D0 #Lol splat says that this is bss
     vram: 0x801DAFA0
+    symbol_name_format: A95D0_$VRAM
     subsegments:
     - [0xA95D0, c, overlay_A95D0]
     - [0xAF8C0, c, overlay_AF8C0]
@@ -207,22 +206,27 @@ segments:
     type: code
     start: 0x1B1FB0
     subsegments:
-    - [0x1B1FB0, bin]
+    - [0x1B1FB0, bin] #Need the vram of this !!!!!!!
     - [0x1B3E10, bin]
 
   - name: overlay_1B3EC0
     type: code
     start: 0x1B3EC0
     vram: 0x802C5800
+    symbol_name_format: 1B3EC0_$VRAM
     subsegments:
-    - [0x1B3EC0, bin]
-    - [0x1B5290, bin]
-    - [0x1B5570, bin] #?????
-    - [0x1BC810, bin]
-    - [0x1BDFE0, bin]
-    - [0x1BFDE0, bin]
-    - [0x1C17E0, bin]
-    - [0x1C2150, bin]
+    - [0x1B3EC0, c, overlay_1B3EC0] #Migrated !
+    - [0x1B5290, bin] #BSS maybe?
+
+    #This one seem to be loaded when the game enters in a race
+  - name: overlay_1B55A0
+    type: code
+    start: 0x1B55A0
+    vram: 0x802C5800
+    symbol_name_format: 1B55A0_$VRAM
+    subsegments:
+    - [0x1B55A0, bin]
+    - [0x1CF050, bin]
 
   - name: LAST_MIO0_SEGMENT_OVERLAY
     type: code

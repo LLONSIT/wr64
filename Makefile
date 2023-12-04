@@ -26,10 +26,10 @@ CYAN    := \033[0;36m
 
 BUILD_DIR = build
 ASM_DIRS  = asm/data asm asm/libultra #For libultra handwritten files
-BIN_DIRS  = assets
+BIN_DIRS  = assets assets/mio0_seg
 
 SRC_DIR   = src
-LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/libc $(SRC_DIR)/os/audio $(SRC_DIR)/libultra_nm $(SRC_DIR)/os/gu
+LIBULTRA_SRC_DIRS = $(SRC_DIR)/os $(SRC_DIR)/os/libc $(SRC_DIR)/os/audio $(SRC_DIR)/libultra_nm $(SRC_DIR)/os/gu 
 
 DEFINE_SRC_DIRS  = $(SRC_DIR) $(SRC_DIR)/core $(LIBULTRA_SRC_DIRS)
 SRC_DIRS = $(DEFINE_SRC_DIRS)
