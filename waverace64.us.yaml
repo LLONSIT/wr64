@@ -173,26 +173,24 @@ segments:
       - [0x8C8C0, c, os/__osAtomicDec]
       - [0x8C920, c, os/libc/ldiv]
       - [0x8CAB0, asm, fast3d_part1] #TODO: Put these on a separated segment
-      - [0x8CBE0, bin, fast3d_part2]
-      - [0x8D8E0, bin, fast3d_audio]
+      - [0x8CB80, bin, fast3d_part2]
+      - [0x8DFB0, bin, fast3d_audio]
 
   - name: next_bin #Data and Rodata for the main overlay??
     type: code
-    start: 0x8D8F0 #Needs to be 0x16 Aligned
+    start: 0x8EDF0 #Needs to be 0x16 Aligned
     subsegments:
-    - [0x8D8F0, bin]
-    - [0x97780, bin, Initial_loading_image] #rgba16
-    - [0x9F580, bin]
+    - [0x8EDF0, bin]
 
     #Q: Why are putting this here?
     #A: Because it has a different vram
   - name: overlay_A95D0
     type: code
-    start: 0xA95D0
+    start: 0xA95D0 #Lol splat says that this is bss
     vram: 0x801DAFA0
     subsegments:
     - [0xA95D0, c, overlay_A95D0]
-    - [0xAF8C0, c, overlay_AF8C0] #Need to split more files from the overlay
+    - [0xAF8C0, c, overlay_AF8C0]
     - [0xB2510, c, overlay_B2510]
     - [0xB2A70, c, overlay_B2A70]
     - [0xB3AA0, c, overlay_B3AA0]
@@ -200,12 +198,36 @@ segments:
     - [0xB66E0, c, overlay_B66E0]
     - [0xCAE70, bin]
 
-
-  - name: MIO0_OVERLAY
-    type: code
+  - name: MIO0_chunk
+    type: bin
     start: 0x1AE660
+
+    #Just need the exact vram of these
+  - name: overlay_1B1FB0
+    type: code
+    start: 0x1B1FB0
     subsegments:
-    - [0x1AE660, bin]
+    - [0x1B1FB0, bin]
+    - [0x1B3E10, bin]
+
+  - name: overlay_1B3EC0
+    type: code
+    start: 0x1B3EC0
+    vram: 0x802C5800
+    subsegments:
+    - [0x1B3EC0, bin]
+    - [0x1B5290, bin]
+    - [0x1B5570, bin] #?????
+    - [0x1BC810, bin]
+    - [0x1BDFE0, bin]
+    - [0x1BFDE0, bin]
+    - [0x1C17E0, bin]
+    - [0x1C2150, bin]
+
+  - name: LAST_MIO0_SEGMENT_OVERLAY
+    type: code
+    start: 0x1D11D0
+    subsegments:
     - [0x1D11D0, bin]
     - [0x1E5860, bin]
     - [0x1EFCF0, bin]
