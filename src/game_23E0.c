@@ -3,6 +3,7 @@
 #include "structs.h"
 #include "functions.h"
 
+s32 __additional_scanline;
 
 s32 func_80047BE0(f32 arg0) {
     if (arg0 < 0.0f) {

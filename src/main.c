@@ -4,6 +4,14 @@
 #include "variables.h"
 #include "functions.h"
 
+OSTask *second_task;
+OSTask *first_task;
+s32 D_800D4600;
+s32 D_800D4604;
+OSThread *D_801539E0;
+void* D_80151DE0;
+OSTask *second_task;
+
 void func_80047470(void) {
     osSpTaskYield();
     D_800D4600 = 1;

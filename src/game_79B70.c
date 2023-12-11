@@ -1,5 +1,7 @@
 #include "common.h"
 
+s32 D_800E7CBC;
+
 #pragma GLOBAL_ASM("asm/nonmatchings/game_79B70/func_800BF370.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_79B70/func_800BF6AC.s")

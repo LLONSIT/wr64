@@ -18,7 +18,30 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/overlay_B66E0/func_A95D0_801E9B04.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/overlay_B66E0/func_A95D0_801E9D6C.s")
+void func_A95D0_801E9D6C(void) {
+    switch (D_A95D0_80228A78.unk2) {                /* irregular */
+    case 0:
+        D_A95D0_80228A78.unkC = 0xFF;
+        D_A95D0_80228A78.unkE = (s16) (u32) (((f32) D_A95D0_80228A78.unk4 * 255.0f) / (f32) D_A95D0_80228A78.unk8);
+        D_A95D0_80228A78.unk10 = 0;
+        return;
+    case 1:
+        D_A95D0_80228A78.unkC = 0xFF;
+        D_A95D0_80228A78.unkE = 0xFF;
+        D_A95D0_80228A78.unk10 = (s16) (u32) (((f32) D_A95D0_80228A78.unk4 * 255.0f) / (f32) D_A95D0_80228A78.unk8);
+        return;
+    case 2:
+        D_A95D0_80228A78.unkC = 0xFF;
+        D_A95D0_80228A78.unkE = 0xFF;
+        D_A95D0_80228A78.unk10 = (s16) (u32) (((f32) (D_A95D0_80228A78.unk8 - D_A95D0_80228A78.unk4) * 255.0f) / (f32) D_A95D0_80228A78.unk8);
+        return;
+    case 3:
+        D_A95D0_80228A78.unkC = 0xFF;
+        D_A95D0_80228A78.unkE = (s16) (u32) (((f32) (D_A95D0_80228A78.unk8 - D_A95D0_80228A78.unk4) * 255.0f) / (f32) D_A95D0_80228A78.unk8);
+        D_A95D0_80228A78.unk10 = 0;
+        return;
+    }
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/overlay_B66E0/func_A95D0_801EA0B0.s")
 

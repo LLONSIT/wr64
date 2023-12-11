@@ -5,6 +5,13 @@
 #include "functions.h"
 #include "structs.h"
 
+//File declaration
+Gfx *D_1000098;
+s32 D_80151950;
+s32 D_8015194C;
+s32 D_800D45D8;
+s32 D_800D45DC[];
+
 #pragma GLOBAL_ASM("asm/nonmatchings/game_1050/func_80046850.s")
 
 void func_800468AC(void) {

@@ -65,4 +65,15 @@ typedef struct {
 	f32 unk32C;
 } struct_800762D0;
 
+struct ovl_A95D0_B66E0_1 {
+    s16 unk0;
+    s16 unk2;
+    s32 unk4;
+    s32 unk8;
+    s16 unkC;
+    s16 unkE;
+    s16 unk10;
+};
+
+
 #endif /* STRUCTS_H */
