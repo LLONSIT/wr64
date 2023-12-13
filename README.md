@@ -3,6 +3,20 @@
 # Wave Race 64
 A early decompilation of a game with many waves!
 
+# Progress (Static) 
+- Game Code
+<p align="left">
+    <a href="" alt="WR64_Total_Functions">
+        <img src="https://img.shields.io/badge/Functions_97%2F1667-5.83%25-blue" /></a>
+  
+</p>
+
+- Assets
+<p align="left">
+    <a href="" alt="Assets">
+        <img src="https://img.shields.io/badge/TODO-red" /></a>
+  
+</p>
 
 ```diff
 + Some info +
