@@ -101,7 +101,18 @@ void func_A95D0_801DAFA0(struct ovl_A95D0_801DAFA0** arg0, int arg1) {
 
 #pragma GLOBAL_ASM("asm/nonmatchings/overlay_A95D0/func_A95D0_801DFDA0.s")
 
-#pragma GLOBAL_ASM("asm/nonmatchings/overlay_A95D0/func_A95D0_801DFDA8.s")
+void func_A95D0_801DFDA8(struct ovl_A95D0_801DFDA8* arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 arg7, s32 arg8, s32 arg9, s32 argA) {
+    arg0->unk10 = arg1;
+    arg0->unk14 = arg2;
+    arg0->unk18 = arg3;
+    arg0->unk1C = arg4;
+    arg0->unk20 = arg5;
+    arg0->unk24 = arg6;
+    arg0->unk28 = arg7;
+    arg0->unk2C = arg8;
+    arg0->unk30 = arg9;
+    arg0->unk34 = argA;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/overlay_A95D0/func_A95D0_801DFDF0.s")
 

@@ -30,7 +30,7 @@ segments:
   - name: boot
     type: bin
     start: 0x40
-  - name: main
+  - name: main_segment
     type: code
     start: 0x1000
     vram: 0x80046800
@@ -119,7 +119,7 @@ segments:
       - [0x84620, c, os/osPhysicalToVirtual]
       - [0x84630, c, libultra_nm/UnkLibultraSeg_84630]
       - [0x84760, c, libultra_nm/UnkLibultraSeg_84760]
-      - [0x84A10, c, libultra_nm/sprintf]
+      - [0x84A10, c, os/sprintf]
       - [0x84AC0, hasm, libultra/invaldcache]
       - [0x84B70, c, libultra_nm/UnkLibultraSeg_84B70]
       - [0x84C80, hasm, libultra/invalicache]
@@ -204,8 +204,10 @@ segments:
   - name: overlay_1B1FB0
     type: code
     start: 0x1B1FB0
+    #vram: 0x801F77B0
+    #symbol_name_format: 1B1FB0_$VRAM
     subsegments:
-    - [0x1B1FB0, bin] #Need the vram of this !!!!!!!
+    - [0x1B1FB0, bin] #Need the exact vram of this !!!!!!!
     - [0x1B3E10, bin]
 
   - name: overlay_1B3EC0
@@ -217,15 +219,51 @@ segments:
     - [0x1B3EC0, c, overlay_1B3EC0] #Migrated !
     - [0x1B5290, bin] #BSS maybe?
 
-    #This one seem to be loaded when the game enters in a race
+    #This one seems to be loaded when the game enters in a race
   - name: overlay_1B55A0
-    type: code
+    type: bin
     start: 0x1B55A0
     vram: 0x802C5800
-    symbol_name_format: 1B55A0_$VRAM
-    subsegments:
-    - [0x1B55A0, bin]
-    - [0x1CF050, bin]
+
+  # - name: overlay_1B55A0
+  #   type: code
+  #   start: 0x1B55A0
+  #   vram: 0x802C5800
+  #   symbol_name_format: 1B55A0_$VRAM
+  #   subsegments:
+  #   - [0x1B55A0, c, overlay_1B55A0]
+  #   - [0x1B91E0, bin]
+  #   - [0x1B9440, c, overlay_1B9440]
+  #   - [0x1BC800, bin]
+  #   - [0x1BC890, c, overlay_1BC890]
+  #   - [0x1BDFE0, bin]
+  #   - [0x1BE0B0, c, overlay_1BE0B0]
+  #   - [0x1BFDE0, bin]
+  #   - [0x1BFF50, c, overlay_1BFF50]
+  #   - [0x1C17E0, c, overlay_1C17E0]
+  #   - [0x1C2150, bin]
+  #   - [0x1C2250, c, overlay_1C2250]
+  #   - [0x1C36C0, bin]
+  #   - [0x1C3780, c, overlay_1C3780]
+  #   - [0x1C43B0, bin]
+  #   - [0x1C43F0, c, overlay_1C43F0]
+  #   - [0x1C4910, bin]
+  #   - [0x1C49A0, c, overlay_1C49A0]
+  #   - [0x1C61E0, bin]
+  #   - [0x1C66D0, c, overlay_1C66D0]
+  #   - [0x1C8F90, bin]
+  #   - [0x1C9150, c, overlay_1C9150]
+  #   - [0x1CA3F0, bin]
+  #   - [0x1CA480, c, overlay_1CA480]
+  #   - [0x1CADD0, bin]
+  #   - [0x1CAE40, c, overlay_1CAE40]
+  #   - [0x1CBAA0, bin]
+  #   - [0x1CBAF0, c, overlay_1CBAF0]
+  #   - [0x1CF040, bin]
+  #   - [0x1CF180, c, overlay_1CF180]
+  #   - [0x1CFA70, bin]
+  #   - [0x1CFB60, c, overlay_1CFB60]
+  #   - [0x1D10B0, bin] #End
 
   - name: LAST_MIO0_SEGMENT_OVERLAY
     type: code
@@ -360,6 +398,11 @@ segments:
     - [0x3F46F0, bin]
     - [0x3F5A30, bin]
     - [0x405810, bin]
+
+    #TODO: Check this
+  - name: sound
+    type: bin
+    start: 0x7AE670
 
 
   - [0x800000]

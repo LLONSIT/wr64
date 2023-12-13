@@ -1,8 +1,30 @@
-#include "common.h"
+#include <ultra64.h>
+#include "functions.h"
+#include "variables.h"
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_3AC00/func_80080400.s")
+void func_80080400(void) {
+    func_80085EEC();
+    if (D_801CE650 == 3) {
+        func_8008044C();
+    } else {
+    func_80080630();
+    }
+}
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_3AC00/func_8008044C.s")
+void func_8008044C(void) {
+    func_80086DA8();
+    func_80087E70();
+    func_800861AC();
+    func_80087E70();
+    func_800861AC();
+    func_80087E70();
+    func_80088418();
+    func_80085510();
+    func_80080864();
+    func_80080E34();
+    func_80081048();
+    func_80087AE8();
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_3AC00/func_800804C4.s")
 

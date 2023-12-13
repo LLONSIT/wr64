@@ -6,6 +6,9 @@
 #include "structs.h"
 #include <PR/gbi.h> //for macros
 
+//File declaration
+int D_801CE6B0[4];
+
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_80091F50.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_800922E4.s")
@@ -50,7 +53,17 @@ void *func_80093F78(Gfx* gDisplayListHead)
     return gDisplayListHead;
 }
 
-#pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_80094088.s")
+int func_80094088(u32 arg0) {
+    int var_v1;
+    int ret;
+
+    var_v1 = arg0 >> 0x18;
+    if (var_v1 >= 0x10) {
+        var_v1 = 0;
+    }
+    ret = D_801CE6B0[var_v1] + (arg0 & 0xFFFFFF) + 0x80000000;
+    return ret;
+}
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_800940C4.s")
 
@@ -73,3 +86,4 @@ void *func_80093F78(Gfx* gDisplayListHead)
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_80094ACC.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/game_4C750/func_80094FE8.s")
+
